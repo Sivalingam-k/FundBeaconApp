@@ -1,0 +1,39 @@
+2025-07-16 10:09:28.633 +05:30 [INF] Executed DbCommand (48ms) [Parameters=[@__threshold_0='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[IsDeleted], [a].[IsLive], [a].[LastLogin], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[RefreshTokenExpiryTime], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[IsDeleted] = CAST(0 AS bit) AND [a].[LastLogin] < @__threshold_0 AND [a].[IsDeleted] = CAST(0 AS bit)
+2025-07-16 11:21:05.573 +05:30 [WRN] Entity 'ApplicationUser' has a global query filter defined and is the required end of a relationship with the entity 'Customer'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2025-07-16 11:21:08.088 +05:30 [INF] Executed DbCommand (136ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2025-07-16 11:21:08.346 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2025-07-16 11:21:08.349 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2025-07-16 11:21:08.351 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2025-07-16 11:21:08.770 +05:30 [INF] User profile is available. Using 'C:\Users\sivalingam.k\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-07-16 11:21:08.958 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[@__threshold_0='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[IsDeleted], [a].[IsLive], [a].[LastLogin], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[RefreshTokenExpiryTime], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[IsDeleted] = CAST(0 AS bit) AND [a].[LastLogin] < @__threshold_0 AND [a].[IsDeleted] = CAST(0 AS bit)
+2025-07-16 11:21:09.586 +05:30 [INF] Now listening on: https://localhost:7068
+2025-07-16 11:21:09.587 +05:30 [INF] Now listening on: http://localhost:5165
+2025-07-16 11:21:09.747 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-07-16 11:21:09.748 +05:30 [INF] Hosting environment: Development
+2025-07-16 11:21:09.748 +05:30 [INF] Content root path: C:\Users\sivalingam.k\source\repos\FundBeacon\FundBeacon
+2025-07-16 11:21:13.592 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7068/swagger/index.html - null null
+2025-07-16 11:21:15.036 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7068/swagger/index.html - 200 null text/html;charset=utf-8 1474.1794ms
+2025-07-16 11:21:15.181 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7068/_vs/browserLink - null null
+2025-07-16 11:21:15.308 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7068/_framework/aspnetcore-browser-refresh.js - null null
+2025-07-16 11:21:15.415 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7068/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 114.887ms
+2025-07-16 11:21:15.579 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7068/_vs/browserLink - 200 null text/javascript; charset=UTF-8 397.918ms
+2025-07-16 11:21:15.863 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7068/swagger/v1/swagger.json - null null
+2025-07-16 11:21:23.864 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7068/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 8001.782ms

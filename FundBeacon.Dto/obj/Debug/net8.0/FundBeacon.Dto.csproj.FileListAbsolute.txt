@@ -1,0 +1,14 @@
+C:\Users\sivalingam.k\source\repos\FundBeacon\FundBeacon.Dto\bin\Debug\net8.0\FundBeacon.Dto.deps.json
+C:\Users\sivalingam.k\source\repos\FundBeacon\FundBeacon.Dto\bin\Debug\net8.0\FundBeacon.Dto.runtimeconfig.json
+C:\Users\sivalingam.k\source\repos\FundBeacon\FundBeacon.Dto\bin\Debug\net8.0\FundBeacon.Dto.dll
+C:\Users\sivalingam.k\source\repos\FundBeacon\FundBeacon.Dto\bin\Debug\net8.0\FundBeacon.Dto.pdb
+C:\Users\sivalingam.k\source\repos\FundBeacon\FundBeacon.Dto\obj\Debug\net8.0\FundBeacon.Dto.csproj.AssemblyReference.cache
+C:\Users\sivalingam.k\source\repos\FundBeacon\FundBeacon.Dto\obj\Debug\net8.0\FundBeacon.Dto.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sivalingam.k\source\repos\FundBeacon\FundBeacon.Dto\obj\Debug\net8.0\FundBeacon.Dto.AssemblyInfoInputs.cache
+C:\Users\sivalingam.k\source\repos\FundBeacon\FundBeacon.Dto\obj\Debug\net8.0\FundBeacon.Dto.AssemblyInfo.cs
+C:\Users\sivalingam.k\source\repos\FundBeacon\FundBeacon.Dto\obj\Debug\net8.0\FundBeacon.Dto.csproj.CoreCompileInputs.cache
+C:\Users\sivalingam.k\source\repos\FundBeacon\FundBeacon.Dto\obj\Debug\net8.0\FundBeacon.Dto.dll
+C:\Users\sivalingam.k\source\repos\FundBeacon\FundBeacon.Dto\obj\Debug\net8.0\refint\FundBeacon.Dto.dll
+C:\Users\sivalingam.k\source\repos\FundBeacon\FundBeacon.Dto\obj\Debug\net8.0\FundBeacon.Dto.pdb
+C:\Users\sivalingam.k\source\repos\FundBeacon\FundBeacon.Dto\obj\Debug\net8.0\FundBeacon.Dto.genruntimeconfig.cache
+C:\Users\sivalingam.k\source\repos\FundBeacon\FundBeacon.Dto\obj\Debug\net8.0\ref\FundBeacon.Dto.dll
