@@ -3,17 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35327.3
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FundBeacon", "FundBeacon\FundBeacon.csproj", "{A1F689BB-F217-4A08-B6BB-0CFE7E6E6F28}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FundBeacon", "FundBeacon\FundBeacon.csproj", "{A1F689BB-F217-4A08-B6BB-0CFE7E6E6F28}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FundBeacon.Data", "FundBeacon.Data\FundBeacon.Data.csproj", "{91EF61D7-24C9-405D-B5A8-0778AFFD3D91}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FundBeacon.Data", "FundBeacon.Data\FundBeacon.Data.csproj", "{91EF61D7-24C9-405D-B5A8-0778AFFD3D91}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FundBeacon.Dto", "FundBeacon.Dto\FundBeacon.Dto.csproj", "{A5EE9C13-5D94-4629-88E4-6AE335AEB0E9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FundBeacon.Dto", "FundBeacon.Dto\FundBeacon.Dto.csproj", "{A5EE9C13-5D94-4629-88E4-6AE335AEB0E9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FundBeacon.Domain", "FundBeacon.Domain\FundBeacon.Domain.csproj", "{573334D0-8452-467F-876D-D59A9C127006}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FundBeacon.Domain", "FundBeacon.Domain\FundBeacon.Domain.csproj", "{573334D0-8452-467F-876D-D59A9C127006}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FundBeacon.Application", "FundBeacon.Application\FundBeacon.Application.csproj", "{8309B4A4-8E92-4D2A-8530-686E310B0B62}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FundBeacon.Application", "FundBeacon.Application\FundBeacon.Application.csproj", "{8309B4A4-8E92-4D2A-8530-686E310B0B62}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FundBeacon.Tests", "FundBeacon.Tests\FundBeacon.Tests.csproj", "{6667A48F-34C5-4447-9C47-D91E390A026C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FundBeacon.Tests", "FundBeacon.Tests\FundBeacon.Tests.csproj", "{562018A5-4B8F-44B9-BFEC-E4F88C64283C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,10 +41,10 @@ Global
 		{8309B4A4-8E92-4D2A-8530-686E310B0B62}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8309B4A4-8E92-4D2A-8530-686E310B0B62}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8309B4A4-8E92-4D2A-8530-686E310B0B62}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6667A48F-34C5-4447-9C47-D91E390A026C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6667A48F-34C5-4447-9C47-D91E390A026C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6667A48F-34C5-4447-9C47-D91E390A026C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6667A48F-34C5-4447-9C47-D91E390A026C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{562018A5-4B8F-44B9-BFEC-E4F88C64283C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{562018A5-4B8F-44B9-BFEC-E4F88C64283C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{562018A5-4B8F-44B9-BFEC-E4F88C64283C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{562018A5-4B8F-44B9-BFEC-E4F88C64283C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

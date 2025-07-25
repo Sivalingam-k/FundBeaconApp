@@ -7,6 +7,7 @@ C:\Users\sivalingam.k\source\repos\FundBeacon\FundBeacon.Dto\obj\Debug\net8.0\Fu
 C:\Users\sivalingam.k\source\repos\FundBeacon\FundBeacon.Dto\obj\Debug\net8.0\FundBeacon.Dto.AssemblyInfoInputs.cache
 C:\Users\sivalingam.k\source\repos\FundBeacon\FundBeacon.Dto\obj\Debug\net8.0\FundBeacon.Dto.AssemblyInfo.cs
 C:\Users\sivalingam.k\source\repos\FundBeacon\FundBeacon.Dto\obj\Debug\net8.0\FundBeacon.Dto.csproj.CoreCompileInputs.cache
+C:\Users\sivalingam.k\source\repos\FundBeacon\FundBeacon.Dto\obj\Debug\net8.0\FundBeacon.Dto.sourcelink.json
 C:\Users\sivalingam.k\source\repos\FundBeacon\FundBeacon.Dto\obj\Debug\net8.0\FundBeacon.Dto.dll
 C:\Users\sivalingam.k\source\repos\FundBeacon\FundBeacon.Dto\obj\Debug\net8.0\refint\FundBeacon.Dto.dll
 C:\Users\sivalingam.k\source\repos\FundBeacon\FundBeacon.Dto\obj\Debug\net8.0\FundBeacon.Dto.pdb

@@ -8,6 +8,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using Newtonsoft.Json;
 using System;
+using System.Data.Common;
 using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Security.Claims;
@@ -79,7 +80,9 @@ namespace FundBeacon.Application.Services
                 return (400, "Invalid or expired token.");
             }
 
-            await using var tx = await _context.Database.BeginTransactionAsync();
+            //await using var tx = await _context.Database.BeginTransactionAsync();
+            var tx = _context.Database.IsRelational() ? await _context.Database.BeginTransactionAsync() : null;
+
 
             try
             {
@@ -145,7 +148,10 @@ namespace FundBeacon.Application.Services
                 _context.Contacts.Add(contact);
 
                 await _context.SaveChangesAsync();
-                await tx.CommitAsync();
+                //await tx.CommitAsync();
+                if (tx != null)
+                    await tx.CommitAsync();
+
                 await _userManager.AddToRoleAsync(user, payload.Role);
 
 
@@ -153,7 +159,10 @@ namespace FundBeacon.Application.Services
             }
             catch (Exception ex)
             {
-                await tx.RollbackAsync();
+                //await tx.RollbackAsync();
+                if (tx != null)
+                    await tx.RollbackAsync();
+
                 return (500, $"Registration failed: {ex.Message}");
             }
         }

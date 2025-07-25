@@ -49,6 +49,32 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
         };
     });
 builder.Services.AddAuthorization();
+//builder.Services.AddSwaggerGen(c =>
+//{
+//    c.SwaggerDoc("v1", new OpenApiInfo { Title = "FundBeacon API", Version = "v1" });
+ 
+//    var jwtSecurityScheme = new OpenApiSecurityScheme
+//    {
+//        Scheme = "bearer",
+//        BearerFormat = "JWT",
+//        Name = "JWT Authentication",
+//        In = ParameterLocation.Header,
+//        Type = SecuritySchemeType.Http,
+//        Description = "Enter JWT Bearer token ONLY",
+ 
+//        Reference = new OpenApiReference
+//        {
+//            Id = JwtBearerDefaults.AuthenticationScheme,
+//            Type = ReferenceType.SecurityScheme
+//        }
+//    };
+ 
+//    c.AddSecurityDefinition(jwtSecurityScheme.Reference.Id, jwtSecurityScheme);
+//    c.AddSecurityRequirement(new OpenApiSecurityRequirement
+//    {
+//        { jwtSecurityScheme, Array.Empty<string>() }
+//    });
+//});
 
 var app = builder.Build();
 using (var scope = app.Services.CreateScope())

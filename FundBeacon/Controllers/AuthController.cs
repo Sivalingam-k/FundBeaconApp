@@ -7,6 +7,7 @@ namespace FundBeacon.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
+    
     public class AuthController : ControllerBase
     {
         private readonly IAuthService _auth;
@@ -31,6 +32,7 @@ namespace FundBeacon.Controllers
         }
 
         [HttpGet("confirm-registration")]
+        
         public async Task<IActionResult> Confirm([FromQuery] string token)
         {
             _logger.LogInformation("Confirm registration token received");

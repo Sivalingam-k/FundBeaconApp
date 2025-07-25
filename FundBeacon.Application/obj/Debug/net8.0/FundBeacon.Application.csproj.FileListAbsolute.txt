@@ -13,6 +13,7 @@ C:\Users\sivalingam.k\source\repos\FundBeacon\FundBeacon.Application\obj\Debug\n
 C:\Users\sivalingam.k\source\repos\FundBeacon\FundBeacon.Application\obj\Debug\net8.0\FundBeacon.Application.AssemblyInfoInputs.cache
 C:\Users\sivalingam.k\source\repos\FundBeacon\FundBeacon.Application\obj\Debug\net8.0\FundBeacon.Application.AssemblyInfo.cs
 C:\Users\sivalingam.k\source\repos\FundBeacon\FundBeacon.Application\obj\Debug\net8.0\FundBeacon.Application.csproj.CoreCompileInputs.cache
+C:\Users\sivalingam.k\source\repos\FundBeacon\FundBeacon.Application\obj\Debug\net8.0\FundBeacon.Application.sourcelink.json
 C:\Users\sivalingam.k\source\repos\FundBeacon\FundBeacon.Application\obj\Debug\net8.0\FundBeac.CB9D485E.Up2Date
 C:\Users\sivalingam.k\source\repos\FundBeacon\FundBeacon.Application\obj\Debug\net8.0\FundBeacon.Application.dll
 C:\Users\sivalingam.k\source\repos\FundBeacon\FundBeacon.Application\obj\Debug\net8.0\refint\FundBeacon.Application.dll
