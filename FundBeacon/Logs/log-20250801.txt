@@ -1,0 +1,289 @@
+2025-08-01 16:54:09.524 +05:30 [WRN] Entity 'ApplicationUser' has a global query filter defined and is the required end of a relationship with the entity 'Customer'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2025-08-01 16:54:39.673 +05:30 [WRN] Entity 'ApplicationUser' has a global query filter defined and is the required end of a relationship with the entity 'Customer'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2025-08-01 16:54:40.156 +05:30 [WRN] Entity 'ApplicationUser' has a global query filter defined and is the required end of a relationship with the entity 'Customer'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2025-08-01 16:55:02.854 +05:30 [WRN] Entity 'ApplicationUser' has a global query filter defined and is the required end of a relationship with the entity 'Customer'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2025-08-01 17:16:14.357 +05:30 [WRN] Entity 'ApplicationUser' has a global query filter defined and is the required end of a relationship with the entity 'Customer'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2025-08-01 17:16:44.915 +05:30 [WRN] Entity 'ApplicationUser' has a global query filter defined and is the required end of a relationship with the entity 'Customer'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2025-08-01 17:16:45.910 +05:30 [INF] Executed DbCommand (18ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-08-01 17:16:45.921 +05:30 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2025-08-01 17:16:45.956 +05:30 [INF] Executed DbCommand (33ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_getapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session', @LockMode = 'Exclusive';
+SELECT @result
+2025-08-01 17:16:46.027 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF OBJECT_ID(N'[__EFMigrationsHistory]') IS NULL
+BEGIN
+    CREATE TABLE [__EFMigrationsHistory] (
+        [MigrationId] nvarchar(150) NOT NULL,
+        [ProductVersion] nvarchar(32) NOT NULL,
+        CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+    );
+END;
+2025-08-01 17:16:46.035 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-08-01 17:16:46.036 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-08-01 17:16:46.041 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-08-01 17:16:46.051 +05:30 [INF] Applying migration '20250801114615_scholor'.
+2025-08-01 17:16:46.112 +05:30 [INF] Executed DbCommand (19ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [ScholarshipProviders] (
+    [ProviderId] int NOT NULL IDENTITY,
+    [Name] nvarchar(max) NOT NULL,
+    [Description] nvarchar(max) NULL,
+    [ContactEmail] nvarchar(max) NULL,
+    [Phone] nvarchar(max) NULL,
+    [Website] nvarchar(max) NULL,
+    [Address] nvarchar(max) NULL,
+    [ParentProviderId] int NULL,
+    CONSTRAINT [PK_ScholarshipProviders] PRIMARY KEY ([ProviderId]),
+    CONSTRAINT [FK_ScholarshipProviders_ScholarshipProviders_ParentProviderId] FOREIGN KEY ([ParentProviderId]) REFERENCES [ScholarshipProviders] ([ProviderId])
+);
+2025-08-01 17:16:46.115 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Scholarship] (
+    [ScholarshipId] int NOT NULL IDENTITY,
+    [Title] nvarchar(max) NOT NULL,
+    [About] nvarchar(max) NOT NULL,
+    [Eligibility] nvarchar(max) NOT NULL,
+    [Deadline] datetime2 NOT NULL,
+    [Benefits] nvarchar(max) NOT NULL,
+    [DocumentsRequired] nvarchar(max) NOT NULL,
+    [HowCanYouApply] nvarchar(max) NOT NULL,
+    [ContactUs] nvarchar(max) NOT NULL,
+    [Disclaimer] nvarchar(max) NOT NULL,
+    [ProviderId] int NOT NULL,
+    CONSTRAINT [PK_Scholarship] PRIMARY KEY ([ScholarshipId]),
+    CONSTRAINT [FK_Scholarship_ScholarshipProviders_ProviderId] FOREIGN KEY ([ProviderId]) REFERENCES [ScholarshipProviders] ([ProviderId]) ON DELETE CASCADE
+);
+2025-08-01 17:16:46.121 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [ScholarshipApplication] (
+    [ApplicationId] int NOT NULL IDENTITY,
+    [ScholarshipId] int NOT NULL,
+    [CustomerId] int NOT NULL,
+    [ApplicationDate] datetime2 NOT NULL,
+    [Status] nvarchar(max) NOT NULL,
+    [Notes] nvarchar(max) NULL,
+    [SubmittedDocuments] nvarchar(max) NULL,
+    CONSTRAINT [PK_ScholarshipApplication] PRIMARY KEY ([ApplicationId]),
+    CONSTRAINT [FK_ScholarshipApplication_Customers_CustomerId] FOREIGN KEY ([CustomerId]) REFERENCES [Customers] ([CustomerId]) ON DELETE CASCADE,
+    CONSTRAINT [FK_ScholarshipApplication_Scholarship_ScholarshipId] FOREIGN KEY ([ScholarshipId]) REFERENCES [Scholarship] ([ScholarshipId]) ON DELETE CASCADE
+);
+2025-08-01 17:16:46.146 +05:30 [ERR] Failed executing DbCommand (23ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [ScholarshipApplicationVerifications] (
+    [VerificationId] int NOT NULL IDENTITY,
+    [ApplicationId] int NOT NULL,
+    [SubProviderId] int NOT NULL,
+    [VerifiedOn] datetime2 NOT NULL,
+    [VerificationStatus] nvarchar(max) NOT NULL,
+    [Remarks] nvarchar(max) NULL,
+    CONSTRAINT [PK_ScholarshipApplicationVerifications] PRIMARY KEY ([VerificationId]),
+    CONSTRAINT [FK_ScholarshipApplicationVerifications_ScholarshipApplication_ApplicationId] FOREIGN KEY ([ApplicationId]) REFERENCES [ScholarshipApplication] ([ApplicationId]) ON DELETE CASCADE,
+    CONSTRAINT [FK_ScholarshipApplicationVerifications_ScholarshipProviders_SubProviderId] FOREIGN KEY ([SubProviderId]) REFERENCES [ScholarshipProviders] ([ProviderId]) ON DELETE CASCADE
+);
+2025-08-01 18:21:48.066 +05:30 [WRN] Entity 'ApplicationUser' has a global query filter defined and is the required end of a relationship with the entity 'Customer'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2025-08-01 18:21:50.939 +05:30 [INF] Executed DbCommand (28ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-08-01 18:21:50.971 +05:30 [INF] Executed DbCommand (17ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-08-01 18:21:50.988 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-08-01 18:22:34.886 +05:30 [WRN] Entity 'ApplicationUser' has a global query filter defined and is the required end of a relationship with the entity 'Customer'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2025-08-01 18:23:02.019 +05:30 [WRN] Entity 'ApplicationUser' has a global query filter defined and is the required end of a relationship with the entity 'Customer'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2025-08-01 18:23:02.865 +05:30 [INF] Executed DbCommand (17ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-08-01 18:23:02.876 +05:30 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2025-08-01 18:23:02.897 +05:30 [INF] Executed DbCommand (18ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_getapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session', @LockMode = 'Exclusive';
+SELECT @result
+2025-08-01 18:23:02.968 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF OBJECT_ID(N'[__EFMigrationsHistory]') IS NULL
+BEGIN
+    CREATE TABLE [__EFMigrationsHistory] (
+        [MigrationId] nvarchar(150) NOT NULL,
+        [ProductVersion] nvarchar(32) NOT NULL,
+        CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+    );
+END;
+2025-08-01 18:23:02.976 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-08-01 18:23:02.977 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-08-01 18:23:02.981 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-08-01 18:23:02.999 +05:30 [INF] Applying migration '20250801125235_scholor'.
+2025-08-01 18:23:03.058 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [ScholarshipProviders] (
+    [ProviderId] int NOT NULL IDENTITY,
+    [Name] nvarchar(max) NOT NULL,
+    [Description] nvarchar(max) NULL,
+    [ContactEmail] nvarchar(max) NULL,
+    [Phone] nvarchar(max) NULL,
+    [Website] nvarchar(max) NULL,
+    [Address] nvarchar(max) NULL,
+    [ParentProviderId] int NULL,
+    CONSTRAINT [PK_ScholarshipProviders] PRIMARY KEY ([ProviderId]),
+    CONSTRAINT [FK_ScholarshipProviders_ScholarshipProviders_ParentProviderId] FOREIGN KEY ([ParentProviderId]) REFERENCES [ScholarshipProviders] ([ProviderId])
+);
+2025-08-01 18:23:03.060 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Scholarship] (
+    [ScholarshipId] int NOT NULL IDENTITY,
+    [Title] nvarchar(max) NOT NULL,
+    [About] nvarchar(max) NOT NULL,
+    [Eligibility] nvarchar(max) NOT NULL,
+    [Deadline] datetime2 NOT NULL,
+    [Benefits] nvarchar(max) NOT NULL,
+    [DocumentsRequired] nvarchar(max) NOT NULL,
+    [HowCanYouApply] nvarchar(max) NOT NULL,
+    [ContactUs] nvarchar(max) NOT NULL,
+    [Disclaimer] nvarchar(max) NOT NULL,
+    [ProviderId] int NOT NULL,
+    CONSTRAINT [PK_Scholarship] PRIMARY KEY ([ScholarshipId]),
+    CONSTRAINT [FK_Scholarship_ScholarshipProviders_ProviderId] FOREIGN KEY ([ProviderId]) REFERENCES [ScholarshipProviders] ([ProviderId]) ON DELETE CASCADE
+);
+2025-08-01 18:23:03.067 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [ScholarshipApplication] (
+    [ApplicationId] int NOT NULL IDENTITY,
+    [ScholarshipId] int NOT NULL,
+    [CustomerId] int NOT NULL,
+    [ApplicationDate] datetime2 NOT NULL,
+    [Status] nvarchar(max) NOT NULL,
+    [Notes] nvarchar(max) NULL,
+    [SubmittedDocuments] nvarchar(max) NULL,
+    CONSTRAINT [PK_ScholarshipApplication] PRIMARY KEY ([ApplicationId]),
+    CONSTRAINT [FK_ScholarshipApplication_Customers_CustomerId] FOREIGN KEY ([CustomerId]) REFERENCES [Customers] ([CustomerId]) ON DELETE CASCADE,
+    CONSTRAINT [FK_ScholarshipApplication_Scholarship_ScholarshipId] FOREIGN KEY ([ScholarshipId]) REFERENCES [Scholarship] ([ScholarshipId]) ON DELETE CASCADE
+);
+2025-08-01 18:23:03.079 +05:30 [ERR] Failed executing DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [ScholarshipApplicationVerifications] (
+    [VerificationId] int NOT NULL IDENTITY,
+    [ApplicationId] int NOT NULL,
+    [SubProviderId] int NOT NULL,
+    [VerifiedOn] datetime2 NOT NULL,
+    [VerificationStatus] nvarchar(max) NOT NULL,
+    [Remarks] nvarchar(max) NULL,
+    CONSTRAINT [PK_ScholarshipApplicationVerifications] PRIMARY KEY ([VerificationId]),
+    CONSTRAINT [FK_ScholarshipApplicationVerifications_ScholarshipApplication_ApplicationId] FOREIGN KEY ([ApplicationId]) REFERENCES [ScholarshipApplication] ([ApplicationId]) ON DELETE CASCADE,
+    CONSTRAINT [FK_ScholarshipApplicationVerifications_ScholarshipProviders_SubProviderId] FOREIGN KEY ([SubProviderId]) REFERENCES [ScholarshipProviders] ([ProviderId]) ON DELETE CASCADE
+);
+2025-08-01 18:24:36.280 +05:30 [WRN] Entity 'ApplicationUser' has a global query filter defined and is the required end of a relationship with the entity 'Customer'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2025-08-01 18:24:37.336 +05:30 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-08-01 18:24:37.357 +05:30 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-08-01 18:24:37.366 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-08-01 18:24:57.807 +05:30 [WRN] Entity 'ApplicationUser' has a global query filter defined and is the required end of a relationship with the entity 'Customer'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2025-08-01 18:25:19.100 +05:30 [WRN] Entity 'ApplicationUser' has a global query filter defined and is the required end of a relationship with the entity 'Customer'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2025-08-01 18:25:19.787 +05:30 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-08-01 18:25:19.795 +05:30 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2025-08-01 18:25:19.813 +05:30 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_getapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session', @LockMode = 'Exclusive';
+SELECT @result
+2025-08-01 18:25:19.867 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF OBJECT_ID(N'[__EFMigrationsHistory]') IS NULL
+BEGIN
+    CREATE TABLE [__EFMigrationsHistory] (
+        [MigrationId] nvarchar(150) NOT NULL,
+        [ProductVersion] nvarchar(32) NOT NULL,
+        CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+    );
+END;
+2025-08-01 18:25:19.874 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-08-01 18:25:19.875 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-08-01 18:25:19.878 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-08-01 18:25:19.886 +05:30 [INF] Applying migration '20250801125458_fix_cascade_issue'.
+2025-08-01 18:25:19.922 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [ScholarshipProviders] (
+    [ProviderId] int NOT NULL IDENTITY,
+    [Name] nvarchar(max) NOT NULL,
+    [Description] nvarchar(max) NULL,
+    [ContactEmail] nvarchar(max) NULL,
+    [Phone] nvarchar(max) NULL,
+    [Website] nvarchar(max) NULL,
+    [Address] nvarchar(max) NULL,
+    [ParentProviderId] int NULL,
+    CONSTRAINT [PK_ScholarshipProviders] PRIMARY KEY ([ProviderId]),
+    CONSTRAINT [FK_ScholarshipProviders_ScholarshipProviders_ParentProviderId] FOREIGN KEY ([ParentProviderId]) REFERENCES [ScholarshipProviders] ([ProviderId])
+);
+2025-08-01 18:25:19.923 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Scholarship] (
+    [ScholarshipId] int NOT NULL IDENTITY,
+    [Title] nvarchar(max) NOT NULL,
+    [About] nvarchar(max) NOT NULL,
+    [Eligibility] nvarchar(max) NOT NULL,
+    [Deadline] datetime2 NOT NULL,
+    [Benefits] nvarchar(max) NOT NULL,
+    [DocumentsRequired] nvarchar(max) NOT NULL,
+    [HowCanYouApply] nvarchar(max) NOT NULL,
+    [ContactUs] nvarchar(max) NOT NULL,
+    [Disclaimer] nvarchar(max) NOT NULL,
+    [ProviderId] int NOT NULL,
+    CONSTRAINT [PK_Scholarship] PRIMARY KEY ([ScholarshipId]),
+    CONSTRAINT [FK_Scholarship_ScholarshipProviders_ProviderId] FOREIGN KEY ([ProviderId]) REFERENCES [ScholarshipProviders] ([ProviderId]) ON DELETE CASCADE
+);
+2025-08-01 18:25:19.927 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [ScholarshipApplication] (
+    [ApplicationId] int NOT NULL IDENTITY,
+    [ScholarshipId] int NOT NULL,
+    [CustomerId] int NOT NULL,
+    [ApplicationDate] datetime2 NOT NULL,
+    [Status] nvarchar(max) NOT NULL,
+    [Notes] nvarchar(max) NULL,
+    [SubmittedDocuments] nvarchar(max) NULL,
+    [VerificationId] int NULL,
+    CONSTRAINT [PK_ScholarshipApplication] PRIMARY KEY ([ApplicationId]),
+    CONSTRAINT [FK_ScholarshipApplication_Customers_CustomerId] FOREIGN KEY ([CustomerId]) REFERENCES [Customers] ([CustomerId]) ON DELETE CASCADE,
+    CONSTRAINT [FK_ScholarshipApplication_Scholarship_ScholarshipId] FOREIGN KEY ([ScholarshipId]) REFERENCES [Scholarship] ([ScholarshipId]) ON DELETE CASCADE
+);
+2025-08-01 18:25:19.929 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [ScholarshipApplicationVerifications] (
+    [VerificationId] int NOT NULL IDENTITY,
+    [ApplicationId] int NOT NULL,
+    [SubProviderId] int NOT NULL,
+    [VerifiedOn] datetime2 NOT NULL,
+    [VerificationStatus] nvarchar(max) NOT NULL,
+    [Remarks] nvarchar(max) NULL,
+    CONSTRAINT [PK_ScholarshipApplicationVerifications] PRIMARY KEY ([VerificationId]),
+    CONSTRAINT [FK_ScholarshipApplicationVerifications_ScholarshipApplication_ApplicationId] FOREIGN KEY ([ApplicationId]) REFERENCES [ScholarshipApplication] ([ApplicationId]) ON DELETE NO ACTION,
+    CONSTRAINT [FK_ScholarshipApplicationVerifications_ScholarshipProviders_SubProviderId] FOREIGN KEY ([SubProviderId]) REFERENCES [ScholarshipProviders] ([ProviderId]) ON DELETE NO ACTION
+);
+2025-08-01 18:25:19.943 +05:30 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Scholarship_ProviderId] ON [Scholarship] ([ProviderId]);
+2025-08-01 18:25:19.944 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_ScholarshipApplication_CustomerId] ON [ScholarshipApplication] ([CustomerId]);
+2025-08-01 18:25:19.944 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_ScholarshipApplication_ScholarshipId] ON [ScholarshipApplication] ([ScholarshipId]);
+2025-08-01 18:25:19.946 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_ScholarshipApplication_VerificationId] ON [ScholarshipApplication] ([VerificationId]);
+2025-08-01 18:25:19.946 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_ScholarshipApplicationVerifications_ApplicationId] ON [ScholarshipApplicationVerifications] ([ApplicationId]);
+2025-08-01 18:25:19.947 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_ScholarshipApplicationVerifications_SubProviderId] ON [ScholarshipApplicationVerifications] ([SubProviderId]);
+2025-08-01 18:25:19.948 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_ScholarshipProviders_ParentProviderId] ON [ScholarshipProviders] ([ParentProviderId]);
+2025-08-01 18:25:19.963 +05:30 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE [ScholarshipApplication] ADD CONSTRAINT [FK_ScholarshipApplication_ScholarshipApplicationVerifications_VerificationId] FOREIGN KEY ([VerificationId]) REFERENCES [ScholarshipApplicationVerifications] ([VerificationId]);
+2025-08-01 18:25:19.972 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20250801125458_fix_cascade_issue', N'9.0.7');
+2025-08-01 18:25:19.974 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_releaseapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session';
+SELECT @result

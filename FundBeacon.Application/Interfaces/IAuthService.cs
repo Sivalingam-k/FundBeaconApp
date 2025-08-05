@@ -1,4 +1,5 @@
-﻿using FundBeacon.Dto;
+﻿using FundBeacon.Domain.Models;
+using FundBeacon.Dto;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,5 +14,9 @@ namespace FundBeacon.Application.Interfaces
         Task<(int StatusCode, string Message)> ConfirmRegistrationAsync(string token);
         Task<(int StatusCode, string Message)> LoginRequestAsync(LoginDto model);
         Task<(int StatusCode, string Message, string? Token, string? RefreshToken)> VerifyOtpAsync(string email, string otp);
+
+        string GenerateJwtToken(ApplicationUser user, IList<string> roles);
+        string GenerateRefreshToken();
+
     }
 }

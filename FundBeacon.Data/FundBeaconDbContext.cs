@@ -17,11 +17,34 @@ namespace FundBeacon.Data
         public DbSet<ContactAddress> ContactAddresses { get; set; }
         public DbSet<ContactAddressAssociation> ContactAddressAssociations { get; set; }
         public DbSet<OtpVerification> OtpVerifications { get; set; }
+        public DbSet<VerificationToken> VerificationTokens { get; set; }
+
+        public DbSet<Scholarship> Scholarships { get; set; }
+        public DbSet<ScholarshipProvider> ScholarshipProviders { get; set; }
+        public DbSet<ScholarshipApplication> ScholarshipApplications { get; set; }
+        public DbSet<ScholarshipApplicationVerification> ScholarshipApplicationVerifications { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
+            builder.Entity<Scholarship>().HasQueryFilter(s => !s.IsDeleted);
+
             base.OnModelCreating(builder);
-            builder.Entity<ApplicationUser>().HasQueryFilter(u => !u.IsDeleted);
+            builder.Entity<Scholarship>().HasQueryFilter(s => !s.IsDeleted);
+
+            builder.Entity<ApplicationUser>()
+           .HasQueryFilter(u => !u.IsDeleted);
+
+            builder.Entity<ScholarshipApplicationVerification>()
+                .HasOne(v => v.Application)
+                .WithMany()
+                .HasForeignKey(v => v.ApplicationId)
+                .OnDelete(DeleteBehavior.Restrict); // ❗ prevents cascade path
+
+            builder.Entity<ScholarshipApplicationVerification>()
+                .HasOne(v => v.SubProvider)
+                .WithMany()
+                .HasForeignKey(v => v.SubProviderId)
+                .OnDelete(DeleteBehavior.Restrict); //
         }
 
     }

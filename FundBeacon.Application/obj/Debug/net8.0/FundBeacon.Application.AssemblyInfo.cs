@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FundBeacon.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cf0955af8d0f83a9e4e740c4e0cd3e24e24ea481")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3a33d5581ee71f890b179aa4fe27cb9fa43a45a2")]
 [assembly: System.Reflection.AssemblyProductAttribute("FundBeacon.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FundBeacon.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

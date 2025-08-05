@@ -14,5 +14,11 @@ namespace FundBeacon.Domain.Models
         public string PhoneNumber { get; set; }
         public string Password { get; set; }
         public string Role { get; set; }
+        public string? ProviderName { get; set; }
+        public string? Website { get; set; }
+        public string? Address { get; set; }
+
+        // Only needed for SUB-PROVIDER
+        public int? ParentProviderId { get; set; }
     }
 }

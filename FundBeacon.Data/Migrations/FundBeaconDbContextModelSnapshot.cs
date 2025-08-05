@@ -47,6 +47,9 @@ namespace FundBeacon.Data.Migrations
                     b.Property<bool>("IsLive")
                         .HasColumnType("bit");
 
+                    b.Property<bool>("IsVerified")
+                        .HasColumnType("bit");
+
                     b.Property<DateTime?>("LastLogin")
                         .HasColumnType("datetime2");
 
@@ -369,6 +372,202 @@ namespace FundBeacon.Data.Migrations
                     b.ToTable("OtpVerification");
                 });
 
+            modelBuilder.Entity("FundBeacon.Domain.Models.Scholarship", b =>
+                {
+                    b.Property<int>("ScholarshipId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ScholarshipId"));
+
+                    b.Property<string>("About")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Benefits")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ContactUs")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("Deadline")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Disclaimer")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("DocumentsRequired")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Eligibility")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("HowCanYouApply")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("ProviderId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("ScholarshipId");
+
+                    b.HasIndex("ProviderId");
+
+                    b.ToTable("Scholarship");
+                });
+
+            modelBuilder.Entity("FundBeacon.Domain.Models.ScholarshipApplication", b =>
+                {
+                    b.Property<int>("ApplicationId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ApplicationId"));
+
+                    b.Property<DateTime>("ApplicationDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("CustomerId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Notes")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("ScholarshipId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("SubmittedDocuments")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("VerificationId")
+                        .HasColumnType("int");
+
+                    b.HasKey("ApplicationId");
+
+                    b.HasIndex("CustomerId");
+
+                    b.HasIndex("ScholarshipId");
+
+                    b.HasIndex("VerificationId");
+
+                    b.ToTable("ScholarshipApplication");
+                });
+
+            modelBuilder.Entity("FundBeacon.Domain.Models.ScholarshipApplicationVerification", b =>
+                {
+                    b.Property<int>("VerificationId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("VerificationId"));
+
+                    b.Property<int>("ApplicationId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Remarks")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("SubProviderId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("VerificationStatus")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("VerifiedOn")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("VerificationId");
+
+                    b.HasIndex("ApplicationId");
+
+                    b.HasIndex("SubProviderId");
+
+                    b.ToTable("ScholarshipApplicationVerifications");
+                });
+
+            modelBuilder.Entity("FundBeacon.Domain.Models.ScholarshipProvider", b =>
+                {
+                    b.Property<int>("ProviderId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ProviderId"));
+
+                    b.Property<string>("Address")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ContactEmail")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("ParentProviderId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Phone")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Website")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("ProviderId");
+
+                    b.HasIndex("ParentProviderId");
+
+                    b.ToTable("ScholarshipProviders");
+                });
+
+            modelBuilder.Entity("FundBeacon.Domain.Models.VerificationToken", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("ExpiryTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsUsed")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Token")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("VerificationTokens");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
                 {
                     b.Property<string>("Id")
@@ -557,6 +756,81 @@ namespace FundBeacon.Data.Migrations
                     b.Navigation("Customer");
                 });
 
+            modelBuilder.Entity("FundBeacon.Domain.Models.Scholarship", b =>
+                {
+                    b.HasOne("FundBeacon.Domain.Models.ScholarshipProvider", "Provider")
+                        .WithMany("Scholarships")
+                        .HasForeignKey("ProviderId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Provider");
+                });
+
+            modelBuilder.Entity("FundBeacon.Domain.Models.ScholarshipApplication", b =>
+                {
+                    b.HasOne("FundBeacon.Domain.Models.Customer", "Customer")
+                        .WithMany()
+                        .HasForeignKey("CustomerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("FundBeacon.Domain.Models.Scholarship", "Scholarship")
+                        .WithMany("Applications")
+                        .HasForeignKey("ScholarshipId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("FundBeacon.Domain.Models.ScholarshipApplicationVerification", "Verification")
+                        .WithMany()
+                        .HasForeignKey("VerificationId");
+
+                    b.Navigation("Customer");
+
+                    b.Navigation("Scholarship");
+
+                    b.Navigation("Verification");
+                });
+
+            modelBuilder.Entity("FundBeacon.Domain.Models.ScholarshipApplicationVerification", b =>
+                {
+                    b.HasOne("FundBeacon.Domain.Models.ScholarshipApplication", "Application")
+                        .WithMany()
+                        .HasForeignKey("ApplicationId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("FundBeacon.Domain.Models.ScholarshipProvider", "SubProvider")
+                        .WithMany()
+                        .HasForeignKey("SubProviderId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Application");
+
+                    b.Navigation("SubProvider");
+                });
+
+            modelBuilder.Entity("FundBeacon.Domain.Models.ScholarshipProvider", b =>
+                {
+                    b.HasOne("FundBeacon.Domain.Models.ScholarshipProvider", "ParentProvider")
+                        .WithMany("SubProviders")
+                        .HasForeignKey("ParentProviderId");
+
+                    b.Navigation("ParentProvider");
+                });
+
+            modelBuilder.Entity("FundBeacon.Domain.Models.VerificationToken", b =>
+                {
+                    b.HasOne("FundBeacon.Domain.Models.ApplicationUser", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
@@ -611,6 +885,18 @@ namespace FundBeacon.Data.Migrations
             modelBuilder.Entity("FundBeacon.Domain.Models.Customer", b =>
                 {
                     b.Navigation("Associations");
+                });
+
+            modelBuilder.Entity("FundBeacon.Domain.Models.Scholarship", b =>
+                {
+                    b.Navigation("Applications");
+                });
+
+            modelBuilder.Entity("FundBeacon.Domain.Models.ScholarshipProvider", b =>
+                {
+                    b.Navigation("Scholarships");
+
+                    b.Navigation("SubProviders");
                 });
 #pragma warning restore 612, 618
         }

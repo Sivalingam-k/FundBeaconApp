@@ -1,6 +1,8 @@
 ﻿using FundBeacon.Application.Interfaces;
 using FundBeacon.Application.Services;
+using FundBeacon.Domain.Models;
 using FundBeacon.Dto;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FundBeacon.Controllers
@@ -12,11 +14,15 @@ namespace FundBeacon.Controllers
     {
         private readonly IAuthService _auth;
         private readonly ILogger<AuthController> _logger;
+        private readonly SignInManager<ApplicationUser> _signInManager;
+        private readonly IGoogleAuthService _googleAuthService;
 
-        public AuthController(IAuthService auth, ILogger<AuthController> logger)
+        public AuthController(IAuthService auth, ILogger<AuthController> logger, SignInManager<ApplicationUser> signInManager, IGoogleAuthService googleAuthService)
         {
             _auth = auth;
             _logger = logger;
+            _signInManager = signInManager;
+            _googleAuthService = googleAuthService;
         }
 
 
@@ -75,5 +81,31 @@ namespace FundBeacon.Controllers
             return StatusCode(status, new { message });
         }
 
+        [HttpGet("google-login")]
+        public IActionResult GoogleLogin(string returnUrl = "/")
+        {
+            var redirectUrl = Url.Action(nameof(GoogleResponse), "Auth", new { returnUrl });
+            var properties = _signInManager.ConfigureExternalAuthenticationProperties("Google", redirectUrl);
+            return Challenge(properties, "Google");
+        }
+
+        [HttpGet("google-response")]
+        public async Task<IActionResult> GoogleResponse(string returnUrl = "/")
+        {
+            var info = await _signInManager.GetExternalLoginInfoAsync();
+            if (info == null)
+                return Redirect("/login-failed");
+
+            var result = await _googleAuthService.HandleGoogleLoginAsync(info);
+            if (!result.Success)
+                return BadRequest(result.Message);
+
+            return Ok(new
+            {
+                message = result.Message,
+                token = result.Token,
+                refreshToken = result.RefreshToken
+            });
+        }
     }
 }

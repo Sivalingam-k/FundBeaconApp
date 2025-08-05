@@ -12,6 +12,7 @@ namespace FundBeacon.Domain.Models
         public DateTime? RefreshTokenExpiryTime { get; set; }
         public DateTime? LastLogin { get; set; }
         public bool IsDeleted { get; set; } = false;
+        public bool IsVerified { get; set; } = false;
 
 
 
