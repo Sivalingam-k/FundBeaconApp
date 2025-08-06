@@ -1,0 +1,24 @@
+2025-08-06 10:10:14.292 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__threshold_0='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[IsDeleted], [a].[IsLive], [a].[IsVerified], [a].[LastLogin], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[RefreshTokenExpiryTime], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[IsDeleted] = CAST(0 AS bit) AND [a].[LastLogin] < @__threshold_0 AND [a].[IsDeleted] = CAST(0 AS bit)
+2025-08-06 10:11:14.344 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__threshold_0='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[IsDeleted], [a].[IsLive], [a].[IsVerified], [a].[LastLogin], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[RefreshTokenExpiryTime], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[IsDeleted] = CAST(0 AS bit) AND [a].[LastLogin] < @__threshold_0 AND [a].[IsDeleted] = CAST(0 AS bit)
+2025-08-06 10:12:14.356 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__threshold_0='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[IsDeleted], [a].[IsLive], [a].[IsVerified], [a].[LastLogin], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[RefreshTokenExpiryTime], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[IsDeleted] = CAST(0 AS bit) AND [a].[LastLogin] < @__threshold_0 AND [a].[IsDeleted] = CAST(0 AS bit)
+2025-08-06 10:13:14.394 +05:30 [INF] Executed DbCommand (18ms) [Parameters=[@__threshold_0='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[IsDeleted], [a].[IsLive], [a].[IsVerified], [a].[LastLogin], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[RefreshTokenExpiryTime], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[IsDeleted] = CAST(0 AS bit) AND [a].[LastLogin] < @__threshold_0 AND [a].[IsDeleted] = CAST(0 AS bit)
+2025-08-06 10:14:14.277 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__threshold_0='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[IsDeleted], [a].[IsLive], [a].[IsVerified], [a].[LastLogin], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[RefreshTokenExpiryTime], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[IsDeleted] = CAST(0 AS bit) AND [a].[LastLogin] < @__threshold_0 AND [a].[IsDeleted] = CAST(0 AS bit)
+2025-08-06 10:15:14.169 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[@__threshold_0='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[IsDeleted], [a].[IsLive], [a].[IsVerified], [a].[LastLogin], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[RefreshTokenExpiryTime], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[IsDeleted] = CAST(0 AS bit) AND [a].[LastLogin] < @__threshold_0 AND [a].[IsDeleted] = CAST(0 AS bit)

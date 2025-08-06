@@ -55,7 +55,7 @@ builder.Services.AddAuthentication()
     {
         googleOptions.ClientId = builder.Configuration["Authentication:Google:ClientId"];
         googleOptions.ClientSecret = builder.Configuration["Authentication:Google:ClientSecret"];
-        googleOptions.CallbackPath = "/signin-google"; // default
+        googleOptions.CallbackPath = "/dashboard"; // default
     });
 
 builder.Services.AddAuthorization();

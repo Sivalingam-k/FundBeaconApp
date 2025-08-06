@@ -3,8 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\sivalingam.k\\source\\repos\\FundBeacon\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{8309B4A4-8E92-4D2A-8530-686E310B0B62}|FundBeacon.Application\\FundBeacon.Application.csproj|c:\\users\\sivalingam.k\\source\\repos\\fundbeacon\\fundbeacon.application\\services\\usercleanupservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8309B4A4-8E92-4D2A-8530-686E310B0B62}|FundBeacon.Application\\FundBeacon.Application.csproj|solutionrelative:fundbeacon.application\\services\\usercleanupservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1F689BB-F217-4A08-B6BB-0CFE7E6E6F28}|FundBeacon\\FundBeacon.csproj|c:\\users\\sivalingam.k\\source\\repos\\fundbeacon\\fundbeacon\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1F689BB-F217-4A08-B6BB-0CFE7E6E6F28}|FundBeacon\\FundBeacon.csproj|solutionrelative:fundbeacon\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A1F689BB-F217-4A08-B6BB-0CFE7E6E6F28}|FundBeacon\\FundBeacon.csproj|c:\\users\\sivalingam.k\\source\\repos\\fundbeacon\\fundbeacon\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A1F689BB-F217-4A08-B6BB-0CFE7E6E6F28}|FundBeacon\\FundBeacon.csproj|solutionrelative:fundbeacon\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1F689BB-F217-4A08-B6BB-0CFE7E6E6F28}|FundBeacon\\FundBeacon.csproj|c:\\users\\sivalingam.k\\source\\repos\\fundbeacon\\fundbeacon\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A1F689BB-F217-4A08-B6BB-0CFE7E6E6F28}|FundBeacon\\FundBeacon.csproj|solutionrelative:fundbeacon\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8309B4A4-8E92-4D2A-8530-686E310B0B62}|FundBeacon.Application\\FundBeacon.Application.csproj|c:\\users\\sivalingam.k\\source\\repos\\fundbeacon\\fundbeacon.application\\services\\googleauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -19,16 +31,8 @@
       "RelativeMoniker": "D:0:0:{8309B4A4-8E92-4D2A-8530-686E310B0B62}|FundBeacon.Application\\FundBeacon.Application.csproj|solutionrelative:fundbeacon.application\\interfaces\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A1F689BB-F217-4A08-B6BB-0CFE7E6E6F28}|FundBeacon\\FundBeacon.csproj|c:\\users\\sivalingam.k\\source\\repos\\fundbeacon\\fundbeacon\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A1F689BB-F217-4A08-B6BB-0CFE7E6E6F28}|FundBeacon\\FundBeacon.csproj|solutionrelative:fundbeacon\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{8309B4A4-8E92-4D2A-8530-686E310B0B62}|FundBeacon.Application\\FundBeacon.Application.csproj|c:\\users\\sivalingam.k\\source\\repos\\fundbeacon\\fundbeacon.application\\interfaces\\igoogleauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8309B4A4-8E92-4D2A-8530-686E310B0B62}|FundBeacon.Application\\FundBeacon.Application.csproj|solutionrelative:fundbeacon.application\\interfaces\\igoogleauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A1F689BB-F217-4A08-B6BB-0CFE7E6E6F28}|FundBeacon\\FundBeacon.csproj|c:\\users\\sivalingam.k\\source\\repos\\fundbeacon\\fundbeacon\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{A1F689BB-F217-4A08-B6BB-0CFE7E6E6F28}|FundBeacon\\FundBeacon.csproj|solutionrelative:fundbeacon\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8309B4A4-8E92-4D2A-8530-686E310B0B62}|FundBeacon.Application\\FundBeacon.Application.csproj|c:\\users\\sivalingam.k\\source\\repos\\fundbeacon\\fundbeacon.application\\services\\scholarshipservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -58,11 +62,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
+              "Title": "UserCleanupService.cs",
+              "DocumentMoniker": "C:\\Users\\sivalingam.k\\source\\repos\\FundBeacon\\FundBeacon.Application\\Services\\UserCleanupService.cs",
+              "RelativeDocumentMoniker": "FundBeacon.Application\\Services\\UserCleanupService.cs",
+              "ToolTip": "C:\\Users\\sivalingam.k\\source\\repos\\FundBeacon\\FundBeacon.Application\\Services\\UserCleanupService.cs",
+              "RelativeToolTip": "FundBeacon.Application\\Services\\UserCleanupService.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAkwCEAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-05T17:33:26.757Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "IAuthService.cs",
               "DocumentMoniker": "C:\\Users\\sivalingam.k\\source\\repos\\FundBeacon\\FundBeacon.Application\\Interfaces\\IAuthService.cs",
               "RelativeDocumentMoniker": "FundBeacon.Application\\Interfaces\\IAuthService.cs",
@@ -70,12 +87,11 @@
               "RelativeToolTip": "FundBeacon.Application\\Interfaces\\IAuthService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-05T13:24:47.232Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-05T13:24:47.232Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "GoogleAuthService.cs",
               "DocumentMoniker": "C:\\Users\\sivalingam.k\\source\\repos\\FundBeacon\\FundBeacon.Application\\Services\\GoogleAuthService.cs",
               "RelativeDocumentMoniker": "FundBeacon.Application\\Services\\GoogleAuthService.cs",
@@ -88,7 +104,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "IGoogleAuthService.cs",
               "DocumentMoniker": "C:\\Users\\sivalingam.k\\source\\repos\\FundBeacon\\FundBeacon.Application\\Interfaces\\IGoogleAuthService.cs",
               "RelativeDocumentMoniker": "FundBeacon.Application\\Interfaces\\IGoogleAuthService.cs",
@@ -96,38 +112,37 @@
               "RelativeToolTip": "FundBeacon.Application\\Interfaces\\IGoogleAuthService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-05T13:19:36.16Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-05T13:19:36.16Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 3,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\sivalingam.k\\source\\repos\\FundBeacon\\FundBeacon\\appsettings.json",
               "RelativeDocumentMoniker": "FundBeacon\\appsettings.json",
-              "ToolTip": "C:\\Users\\sivalingam.k\\source\\repos\\FundBeacon\\FundBeacon\\appsettings.json",
-              "RelativeToolTip": "FundBeacon\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAEAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\sivalingam.k\\source\\repos\\FundBeacon\\FundBeacon\\appsettings.json*",
+              "RelativeToolTip": "FundBeacon\\appsettings.json*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAABbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2025-08-05T13:16:14.589Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\sivalingam.k\\source\\repos\\FundBeacon\\FundBeacon\\Program.cs",
               "RelativeDocumentMoniker": "FundBeacon\\Program.cs",
-              "ToolTip": "C:\\Users\\sivalingam.k\\source\\repos\\FundBeacon\\FundBeacon\\Program.cs",
-              "RelativeToolTip": "FundBeacon\\Program.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAuwCAAAABEAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\sivalingam.k\\source\\repos\\FundBeacon\\FundBeacon\\Program.cs*",
+              "RelativeToolTip": "FundBeacon\\Program.cs*",
+              "ViewState": "AgIAACQAAAAAAAAAAAAuwDkAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-05T13:12:42.952Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "OtpVerification.cs",
               "DocumentMoniker": "C:\\Users\\sivalingam.k\\source\\repos\\FundBeacon\\FundBeacon.Domain\\Models\\OtpVerification.cs",
               "RelativeDocumentMoniker": "FundBeacon.Domain\\Models\\OtpVerification.cs",
@@ -135,12 +150,11 @@
               "RelativeToolTip": "FundBeacon.Domain\\Models\\OtpVerification.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-05T09:56:59.493Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-05T09:56:59.493Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "EmailService.cs",
               "DocumentMoniker": "C:\\Users\\sivalingam.k\\source\\repos\\FundBeacon\\FundBeacon.Application\\Services\\EmailService.cs",
               "RelativeDocumentMoniker": "FundBeacon.Application\\Services\\EmailService.cs",
@@ -153,20 +167,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "AuthController.cs",
               "DocumentMoniker": "C:\\Users\\sivalingam.k\\source\\repos\\FundBeacon\\FundBeacon\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "FundBeacon\\Controllers\\AuthController.cs",
               "ToolTip": "C:\\Users\\sivalingam.k\\source\\repos\\FundBeacon\\FundBeacon\\Controllers\\AuthController.cs",
               "RelativeToolTip": "FundBeacon\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAAEMAAAAAAAAAAAAmwGwAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAswFkAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-05T09:27:08.01Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "ScholarshipService.cs",
               "DocumentMoniker": "C:\\Users\\sivalingam.k\\source\\repos\\FundBeacon\\FundBeacon.Application\\Services\\ScholarshipService.cs",
               "RelativeDocumentMoniker": "FundBeacon.Application\\Services\\ScholarshipService.cs",
@@ -179,7 +193,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "FundBeaconDbContext.cs",
               "DocumentMoniker": "C:\\Users\\sivalingam.k\\source\\repos\\FundBeacon\\FundBeacon.Data\\FundBeaconDbContext.cs",
               "RelativeDocumentMoniker": "FundBeacon.Data\\FundBeaconDbContext.cs",
@@ -187,12 +201,11 @@
               "RelativeToolTip": "FundBeacon.Data\\FundBeaconDbContext.cs",
               "ViewState": "AgIAABYAAAAAAAAAAAAkwCUAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-05T09:14:45.88Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-05T09:14:45.88Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "AuthService.cs",
               "DocumentMoniker": "C:\\Users\\sivalingam.k\\source\\repos\\FundBeacon\\FundBeacon.Application\\Services\\AuthService.cs",
               "RelativeDocumentMoniker": "FundBeacon.Application\\Services\\AuthService.cs",
@@ -205,7 +218,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "RegisterDto.cs",
               "DocumentMoniker": "C:\\Users\\sivalingam.k\\source\\repos\\FundBeacon\\FundBeacon.Dto\\RegisterDto.cs",
               "RelativeDocumentMoniker": "FundBeacon.Dto\\RegisterDto.cs",
@@ -213,8 +226,7 @@
               "RelativeToolTip": "FundBeacon.Dto\\RegisterDto.cs",
               "ViewState": "AgIAAAoAAAAAAAAAAAAIwBgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-05T09:05:04.854Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-05T09:05:04.854Z"
             }
           ]
         }

@@ -3784,3 +3784,398 @@ WHERE [a].[IsDeleted] = CAST(0 AS bit) AND [a].[LastLogin] < @__threshold_0 AND 
 2025-08-05 19:07:36.057 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7068/_vs/browserLink - 200 null text/javascript; charset=UTF-8 156.3559ms
 2025-08-05 19:07:36.441 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7068/swagger/v1/swagger.json - null null
 2025-08-05 19:07:36.682 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7068/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 240.4216ms
+2025-08-05 22:47:47.106 +05:30 [WRN] Entity 'ApplicationUser' has a global query filter defined and is the required end of a relationship with the entity 'Customer'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2025-08-05 22:47:47.176 +05:30 [WRN] Entity 'Scholarship' has a global query filter defined and is the required end of a relationship with the entity 'ScholarshipApplication'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2025-08-05 22:47:47.176 +05:30 [WRN] Entity 'ApplicationUser' has a global query filter defined and is the required end of a relationship with the entity 'VerificationToken'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2025-08-05 22:47:52.144 +05:30 [INF] Executed DbCommand (89ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2025-08-05 22:47:52.223 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2025-08-05 22:47:52.225 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2025-08-05 22:47:52.227 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2025-08-05 22:47:52.644 +05:30 [INF] User profile is available. Using 'C:\Users\sivalingam.k\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-08-05 22:47:52.787 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[@__threshold_0='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[IsDeleted], [a].[IsLive], [a].[IsVerified], [a].[LastLogin], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[RefreshTokenExpiryTime], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[IsDeleted] = CAST(0 AS bit) AND [a].[LastLogin] < @__threshold_0 AND [a].[IsDeleted] = CAST(0 AS bit)
+2025-08-05 22:47:53.214 +05:30 [INF] Now listening on: https://localhost:7068
+2025-08-05 22:47:53.214 +05:30 [INF] Now listening on: http://localhost:5165
+2025-08-05 22:47:53.359 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-05 22:47:53.359 +05:30 [INF] Hosting environment: Development
+2025-08-05 22:47:53.360 +05:30 [INF] Content root path: C:\Users\sivalingam.k\source\repos\FundBeacon\FundBeacon
+2025-08-05 22:47:55.461 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7068/swagger/index.html - null null
+2025-08-05 22:47:56.586 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7068/swagger/index.html - 200 null text/html;charset=utf-8 1153.9238ms
+2025-08-05 22:47:57.034 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7068/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-05 22:47:57.053 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7068/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 19.6125ms
+2025-08-05 22:47:57.195 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7068/_vs/browserLink - null null
+2025-08-05 22:47:57.389 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7068/_vs/browserLink - 200 null text/javascript; charset=UTF-8 194.2814ms
+2025-08-05 22:47:57.653 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7068/swagger/v1/swagger.json - null null
+2025-08-05 22:47:57.953 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7068/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 300.1658ms
+2025-08-05 22:48:11.380 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7068/api/Auth/google-login?returnUrl=%2Fdashboard - null null
+2025-08-05 22:48:11.425 +05:30 [INF] Executing endpoint 'FundBeacon.Controllers.AuthController.GoogleLogin (FundBeacon)'
+2025-08-05 22:48:11.470 +05:30 [INF] Route matched with {action = "GoogleLogin", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GoogleLogin(System.String) on controller FundBeacon.Controllers.AuthController (FundBeacon).
+2025-08-05 22:49:00.031 +05:30 [INF] Executing ChallengeResult with authentication schemes (["Google"]).
+2025-08-05 22:49:00.061 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__threshold_0='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[IsDeleted], [a].[IsLive], [a].[IsVerified], [a].[LastLogin], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[RefreshTokenExpiryTime], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[IsDeleted] = CAST(0 AS bit) AND [a].[LastLogin] < @__threshold_0 AND [a].[IsDeleted] = CAST(0 AS bit)
+2025-08-05 22:49:00.070 +05:30 [INF] AuthenticationScheme: Google was challenged.
+2025-08-05 22:49:00.074 +05:30 [INF] Executed action FundBeacon.Controllers.AuthController.GoogleLogin (FundBeacon) in 48599.6897ms
+2025-08-05 22:49:00.074 +05:30 [INF] Executed endpoint 'FundBeacon.Controllers.AuthController.GoogleLogin (FundBeacon)'
+2025-08-05 22:49:00.076 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7068/api/Auth/google-login?returnUrl=%2Fdashboard - 302 0 null 48697.3126ms
+2025-08-05 22:49:38.148 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7068/api/Auth/google-response?returnUrl=%2Fdash - null null
+2025-08-05 22:49:38.158 +05:30 [INF] Executing endpoint 'FundBeacon.Controllers.AuthController.GoogleResponse (FundBeacon)'
+2025-08-05 22:49:38.164 +05:30 [INF] Route matched with {action = "GoogleResponse", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GoogleResponse(System.String) on controller FundBeacon.Controllers.AuthController (FundBeacon).
+2025-08-05 22:49:45.672 +05:30 [INF] Executing RedirectResult, redirecting to /login-failed.
+2025-08-05 22:49:45.672 +05:30 [INF] Executed action FundBeacon.Controllers.AuthController.GoogleResponse (FundBeacon) in 7507.3333ms
+2025-08-05 22:49:45.672 +05:30 [INF] Executed endpoint 'FundBeacon.Controllers.AuthController.GoogleResponse (FundBeacon)'
+2025-08-05 22:49:45.672 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7068/api/Auth/google-response?returnUrl=%2Fdash - 302 0 null 7524.3255ms
+2025-08-05 22:49:45.681 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7068/login-failed - null null
+2025-08-05 22:49:45.683 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7068/login-failed - 404 0 null 2.3489ms
+2025-08-05 22:49:45.684 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7068/login-failed, Response status code: 404
+2025-08-05 22:50:00.077 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__threshold_0='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[IsDeleted], [a].[IsLive], [a].[IsVerified], [a].[LastLogin], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[RefreshTokenExpiryTime], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[IsDeleted] = CAST(0 AS bit) AND [a].[LastLogin] < @__threshold_0 AND [a].[IsDeleted] = CAST(0 AS bit)
+2025-08-05 22:51:00.100 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[@__threshold_0='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[IsDeleted], [a].[IsLive], [a].[IsVerified], [a].[LastLogin], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[RefreshTokenExpiryTime], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[IsDeleted] = CAST(0 AS bit) AND [a].[LastLogin] < @__threshold_0 AND [a].[IsDeleted] = CAST(0 AS bit)
+2025-08-05 22:52:00.152 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[@__threshold_0='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[IsDeleted], [a].[IsLive], [a].[IsVerified], [a].[LastLogin], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[RefreshTokenExpiryTime], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[IsDeleted] = CAST(0 AS bit) AND [a].[LastLogin] < @__threshold_0 AND [a].[IsDeleted] = CAST(0 AS bit)
+2025-08-05 22:53:00.175 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__threshold_0='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[IsDeleted], [a].[IsLive], [a].[IsVerified], [a].[LastLogin], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[RefreshTokenExpiryTime], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[IsDeleted] = CAST(0 AS bit) AND [a].[LastLogin] < @__threshold_0 AND [a].[IsDeleted] = CAST(0 AS bit)
+2025-08-05 22:54:00.210 +05:30 [INF] Executed DbCommand (17ms) [Parameters=[@__threshold_0='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[IsDeleted], [a].[IsLive], [a].[IsVerified], [a].[LastLogin], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[RefreshTokenExpiryTime], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[IsDeleted] = CAST(0 AS bit) AND [a].[LastLogin] < @__threshold_0 AND [a].[IsDeleted] = CAST(0 AS bit)
+2025-08-05 22:55:00.265 +05:30 [INF] Executed DbCommand (21ms) [Parameters=[@__threshold_0='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[IsDeleted], [a].[IsLive], [a].[IsVerified], [a].[LastLogin], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[RefreshTokenExpiryTime], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[IsDeleted] = CAST(0 AS bit) AND [a].[LastLogin] < @__threshold_0 AND [a].[IsDeleted] = CAST(0 AS bit)
+2025-08-05 22:55:38.742 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7068/api/Auth/google-login?returnUrl=%2Fdashboard - null null
+2025-08-05 22:55:38.759 +05:30 [INF] Executing endpoint 'FundBeacon.Controllers.AuthController.GoogleLogin (FundBeacon)'
+2025-08-05 22:55:38.760 +05:30 [INF] Route matched with {action = "GoogleLogin", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GoogleLogin(System.String) on controller FundBeacon.Controllers.AuthController (FundBeacon).
+2025-08-05 22:55:46.939 +05:30 [INF] Executing ChallengeResult with authentication schemes (["Google"]).
+2025-08-05 22:55:46.940 +05:30 [INF] AuthenticationScheme: Google was challenged.
+2025-08-05 22:55:46.940 +05:30 [INF] Executed action FundBeacon.Controllers.AuthController.GoogleLogin (FundBeacon) in 8179.7659ms
+2025-08-05 22:55:46.940 +05:30 [INF] Executed endpoint 'FundBeacon.Controllers.AuthController.GoogleLogin (FundBeacon)'
+2025-08-05 22:55:46.941 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7068/api/Auth/google-login?returnUrl=%2Fdashboard - 302 0 null 8198.9153ms
+2025-08-05 22:56:00.295 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__threshold_0='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[IsDeleted], [a].[IsLive], [a].[IsVerified], [a].[LastLogin], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[RefreshTokenExpiryTime], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[IsDeleted] = CAST(0 AS bit) AND [a].[LastLogin] < @__threshold_0 AND [a].[IsDeleted] = CAST(0 AS bit)
+2025-08-05 22:57:00.314 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__threshold_0='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[IsDeleted], [a].[IsLive], [a].[IsVerified], [a].[LastLogin], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[RefreshTokenExpiryTime], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[IsDeleted] = CAST(0 AS bit) AND [a].[LastLogin] < @__threshold_0 AND [a].[IsDeleted] = CAST(0 AS bit)
+2025-08-05 22:58:00.356 +05:30 [INF] Executed DbCommand (16ms) [Parameters=[@__threshold_0='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[IsDeleted], [a].[IsLive], [a].[IsVerified], [a].[LastLogin], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[RefreshTokenExpiryTime], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[IsDeleted] = CAST(0 AS bit) AND [a].[LastLogin] < @__threshold_0 AND [a].[IsDeleted] = CAST(0 AS bit)
+2025-08-05 22:59:00.377 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__threshold_0='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[IsDeleted], [a].[IsLive], [a].[IsVerified], [a].[LastLogin], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[RefreshTokenExpiryTime], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[IsDeleted] = CAST(0 AS bit) AND [a].[LastLogin] < @__threshold_0 AND [a].[IsDeleted] = CAST(0 AS bit)
+2025-08-05 23:00:00.407 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__threshold_0='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[IsDeleted], [a].[IsLive], [a].[IsVerified], [a].[LastLogin], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[RefreshTokenExpiryTime], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[IsDeleted] = CAST(0 AS bit) AND [a].[LastLogin] < @__threshold_0 AND [a].[IsDeleted] = CAST(0 AS bit)
+2025-08-05 23:00:59.296 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7068/api/Auth/google-login?returnUrl=%2Fdashboard - null null
+2025-08-05 23:00:59.304 +05:30 [INF] Executing endpoint 'FundBeacon.Controllers.AuthController.GoogleLogin (FundBeacon)'
+2025-08-05 23:00:59.304 +05:30 [INF] Route matched with {action = "GoogleLogin", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GoogleLogin(System.String) on controller FundBeacon.Controllers.AuthController (FundBeacon).
+2025-08-05 23:01:02.103 +05:30 [INF] Executed DbCommand (25ms) [Parameters=[@__threshold_0='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[IsDeleted], [a].[IsLive], [a].[IsVerified], [a].[LastLogin], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[RefreshTokenExpiryTime], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[IsDeleted] = CAST(0 AS bit) AND [a].[LastLogin] < @__threshold_0 AND [a].[IsDeleted] = CAST(0 AS bit)
+2025-08-05 23:01:04.319 +05:30 [INF] Executing ChallengeResult with authentication schemes (["Google"]).
+2025-08-05 23:01:04.320 +05:30 [INF] AuthenticationScheme: Google was challenged.
+2025-08-05 23:01:04.321 +05:30 [INF] Executed action FundBeacon.Controllers.AuthController.GoogleLogin (FundBeacon) in 5016.7744ms
+2025-08-05 23:01:04.321 +05:30 [INF] Executed endpoint 'FundBeacon.Controllers.AuthController.GoogleLogin (FundBeacon)'
+2025-08-05 23:01:04.321 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7068/api/Auth/google-login?returnUrl=%2Fdashboard - 302 0 null 5025.8222ms
+2025-08-05 23:01:15.766 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7068/api/Auth/google-login?returnUrl=%2Fdashboard - null null
+2025-08-05 23:01:15.792 +05:30 [INF] Executing endpoint 'FundBeacon.Controllers.AuthController.GoogleLogin (FundBeacon)'
+2025-08-05 23:01:15.792 +05:30 [INF] Route matched with {action = "GoogleLogin", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GoogleLogin(System.String) on controller FundBeacon.Controllers.AuthController (FundBeacon).
+2025-08-05 23:01:21.167 +05:30 [INF] Executing ChallengeResult with authentication schemes (["Google"]).
+2025-08-05 23:01:21.167 +05:30 [INF] AuthenticationScheme: Google was challenged.
+2025-08-05 23:01:21.167 +05:30 [INF] Executed action FundBeacon.Controllers.AuthController.GoogleLogin (FundBeacon) in 5375.1266ms
+2025-08-05 23:01:21.167 +05:30 [INF] Executed endpoint 'FundBeacon.Controllers.AuthController.GoogleLogin (FundBeacon)'
+2025-08-05 23:01:21.168 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7068/api/Auth/google-login?returnUrl=%2Fdashboard - 302 0 null 5401.8982ms
+2025-08-05 23:03:26.953 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__threshold_0='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[IsDeleted], [a].[IsLive], [a].[IsVerified], [a].[LastLogin], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[RefreshTokenExpiryTime], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[IsDeleted] = CAST(0 AS bit) AND [a].[LastLogin] < @__threshold_0 AND [a].[IsDeleted] = CAST(0 AS bit)
+2025-08-05 23:03:27.949 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7068/swagger/index.html - null null
+2025-08-05 23:03:27.983 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7068/swagger/index.html - 200 null text/html;charset=utf-8 34.233ms
+2025-08-05 23:03:27.991 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7068/_vs/browserLink - null null
+2025-08-05 23:03:27.991 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7068/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-05 23:03:27.993 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7068/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 2.0331ms
+2025-08-05 23:03:28.021 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7068/_vs/browserLink - 200 null text/javascript; charset=UTF-8 30.164ms
+2025-08-05 23:03:28.257 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7068/swagger/v1/swagger.json - null null
+2025-08-05 23:03:28.276 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7068/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 18.3017ms
+2025-08-05 23:03:51.115 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7068/api/Auth/google-login?returnUrl=%2F - null null
+2025-08-05 23:03:51.118 +05:30 [INF] Executing endpoint 'FundBeacon.Controllers.AuthController.GoogleLogin (FundBeacon)'
+2025-08-05 23:03:51.120 +05:30 [INF] Route matched with {action = "GoogleLogin", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GoogleLogin(System.String) on controller FundBeacon.Controllers.AuthController (FundBeacon).
+2025-08-05 23:03:59.704 +05:30 [INF] Executing ChallengeResult with authentication schemes (["Google"]).
+2025-08-05 23:03:59.705 +05:30 [INF] AuthenticationScheme: Google was challenged.
+2025-08-05 23:03:59.705 +05:30 [INF] Executed action FundBeacon.Controllers.AuthController.GoogleLogin (FundBeacon) in 8585.4083ms
+2025-08-05 23:03:59.705 +05:30 [INF] Executed endpoint 'FundBeacon.Controllers.AuthController.GoogleLogin (FundBeacon)'
+2025-08-05 23:03:59.705 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7068/api/Auth/google-login?returnUrl=%2F - 302 0 null 8591.0181ms
+2025-08-05 23:04:14.329 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7068/api/Auth/google-login?returnUrl=%2F - null null
+2025-08-05 23:04:14.338 +05:30 [INF] Executing endpoint 'FundBeacon.Controllers.AuthController.GoogleLogin (FundBeacon)'
+2025-08-05 23:04:14.338 +05:30 [INF] Route matched with {action = "GoogleLogin", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GoogleLogin(System.String) on controller FundBeacon.Controllers.AuthController (FundBeacon).
+2025-08-05 23:04:19.551 +05:30 [INF] Executing ChallengeResult with authentication schemes (["Google"]).
+2025-08-05 23:04:19.551 +05:30 [INF] AuthenticationScheme: Google was challenged.
+2025-08-05 23:04:19.551 +05:30 [INF] Executed action FundBeacon.Controllers.AuthController.GoogleLogin (FundBeacon) in 5212.9789ms
+2025-08-05 23:04:19.551 +05:30 [INF] Executed endpoint 'FundBeacon.Controllers.AuthController.GoogleLogin (FundBeacon)'
+2025-08-05 23:04:19.551 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7068/api/Auth/google-login?returnUrl=%2F - 302 0 null 5222.735ms
+2025-08-05 23:04:26.966 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__threshold_0='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[IsDeleted], [a].[IsLive], [a].[IsVerified], [a].[LastLogin], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[RefreshTokenExpiryTime], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[IsDeleted] = CAST(0 AS bit) AND [a].[LastLogin] < @__threshold_0 AND [a].[IsDeleted] = CAST(0 AS bit)
+2025-08-05 23:04:33.423 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7068/api/Auth/google-login?returnUrl=%2Fdashboard - null null
+2025-08-05 23:04:33.424 +05:30 [INF] Executing endpoint 'FundBeacon.Controllers.AuthController.GoogleLogin (FundBeacon)'
+2025-08-05 23:04:33.424 +05:30 [INF] Route matched with {action = "GoogleLogin", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GoogleLogin(System.String) on controller FundBeacon.Controllers.AuthController (FundBeacon).
+2025-08-05 23:04:35.893 +05:30 [INF] Executing ChallengeResult with authentication schemes (["Google"]).
+2025-08-05 23:04:35.894 +05:30 [INF] AuthenticationScheme: Google was challenged.
+2025-08-05 23:04:35.894 +05:30 [INF] Executed action FundBeacon.Controllers.AuthController.GoogleLogin (FundBeacon) in 2469.4255ms
+2025-08-05 23:04:35.894 +05:30 [INF] Executed endpoint 'FundBeacon.Controllers.AuthController.GoogleLogin (FundBeacon)'
+2025-08-05 23:04:35.894 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7068/api/Auth/google-login?returnUrl=%2Fdashboard - 302 0 null 2471.2707ms
+2025-08-05 23:04:50.809 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7068/api/Auth/google-login?returnUrl=%2Fdashboard - null null
+2025-08-05 23:04:50.813 +05:30 [INF] Executing endpoint 'FundBeacon.Controllers.AuthController.GoogleLogin (FundBeacon)'
+2025-08-05 23:04:50.813 +05:30 [INF] Route matched with {action = "GoogleLogin", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GoogleLogin(System.String) on controller FundBeacon.Controllers.AuthController (FundBeacon).
+2025-08-05 23:05:26.608 +05:30 [INF] Executing ChallengeResult with authentication schemes (["Google"]).
+2025-08-05 23:05:26.609 +05:30 [INF] AuthenticationScheme: Google was challenged.
+2025-08-05 23:05:26.609 +05:30 [INF] Executed action FundBeacon.Controllers.AuthController.GoogleLogin (FundBeacon) in 35795.8631ms
+2025-08-05 23:05:26.609 +05:30 [INF] Executed endpoint 'FundBeacon.Controllers.AuthController.GoogleLogin (FundBeacon)'
+2025-08-05 23:05:26.609 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7068/api/Auth/google-login?returnUrl=%2Fdashboard - 302 0 null 35800.0141ms
+2025-08-05 23:05:31.388 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__threshold_0='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[IsDeleted], [a].[IsLive], [a].[IsVerified], [a].[LastLogin], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[RefreshTokenExpiryTime], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[IsDeleted] = CAST(0 AS bit) AND [a].[LastLogin] < @__threshold_0 AND [a].[IsDeleted] = CAST(0 AS bit)
+2025-08-05 23:06:33.042 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__threshold_0='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[IsDeleted], [a].[IsLive], [a].[IsVerified], [a].[LastLogin], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[RefreshTokenExpiryTime], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[IsDeleted] = CAST(0 AS bit) AND [a].[LastLogin] < @__threshold_0 AND [a].[IsDeleted] = CAST(0 AS bit)
+2025-08-05 23:07:13.465 +05:30 [WRN] Entity 'ApplicationUser' has a global query filter defined and is the required end of a relationship with the entity 'Customer'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2025-08-05 23:07:13.510 +05:30 [WRN] Entity 'Scholarship' has a global query filter defined and is the required end of a relationship with the entity 'ScholarshipApplication'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2025-08-05 23:07:13.510 +05:30 [WRN] Entity 'ApplicationUser' has a global query filter defined and is the required end of a relationship with the entity 'VerificationToken'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2025-08-05 23:07:14.460 +05:30 [INF] Executed DbCommand (61ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2025-08-05 23:07:14.542 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2025-08-05 23:07:14.543 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2025-08-05 23:07:14.545 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2025-08-05 23:07:14.733 +05:30 [INF] User profile is available. Using 'C:\Users\sivalingam.k\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-08-05 23:07:14.844 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__threshold_0='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[IsDeleted], [a].[IsLive], [a].[IsVerified], [a].[LastLogin], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[RefreshTokenExpiryTime], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[IsDeleted] = CAST(0 AS bit) AND [a].[LastLogin] < @__threshold_0 AND [a].[IsDeleted] = CAST(0 AS bit)
+2025-08-05 23:07:15.145 +05:30 [INF] Now listening on: https://localhost:7068
+2025-08-05 23:07:15.145 +05:30 [INF] Now listening on: http://localhost:5165
+2025-08-05 23:07:15.333 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-08-05 23:07:15.334 +05:30 [INF] Hosting environment: Development
+2025-08-05 23:07:15.334 +05:30 [INF] Content root path: C:\Users\sivalingam.k\source\repos\FundBeacon\FundBeacon
+2025-08-05 23:07:16.148 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7068/swagger/index.html - null null
+2025-08-05 23:07:16.631 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7068/swagger/index.html - 200 null text/html;charset=utf-8 507.4905ms
+2025-08-05 23:07:16.650 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7068/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-05 23:07:16.675 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7068/_vs/browserLink - null null
+2025-08-05 23:07:16.691 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7068/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 40.2835ms
+2025-08-05 23:07:16.773 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7068/_vs/browserLink - 200 null text/javascript; charset=UTF-8 97.6385ms
+2025-08-05 23:07:17.041 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7068/swagger/v1/swagger.json - null null
+2025-08-05 23:07:17.309 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7068/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 268.2533ms
+2025-08-05 23:07:39.157 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7068/api/Auth/google-login?returnUrl=%2Fdashboard - null null
+2025-08-05 23:07:39.187 +05:30 [INF] Executing endpoint 'FundBeacon.Controllers.AuthController.GoogleLogin (FundBeacon)'
+2025-08-05 23:07:39.224 +05:30 [INF] Route matched with {action = "GoogleLogin", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GoogleLogin(System.String) on controller FundBeacon.Controllers.AuthController (FundBeacon).
+2025-08-05 23:07:44.644 +05:30 [INF] Executing ChallengeResult with authentication schemes (["Google"]).
+2025-08-05 23:07:44.663 +05:30 [INF] AuthenticationScheme: Google was challenged.
+2025-08-05 23:07:44.667 +05:30 [INF] Executed action FundBeacon.Controllers.AuthController.GoogleLogin (FundBeacon) in 5439.1592ms
+2025-08-05 23:07:44.668 +05:30 [INF] Executed endpoint 'FundBeacon.Controllers.AuthController.GoogleLogin (FundBeacon)'
+2025-08-05 23:07:44.670 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7068/api/Auth/google-login?returnUrl=%2Fdashboard - 302 0 null 5513.4322ms
+2025-08-05 23:08:01.551 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7068/api/Auth/google-login?returnUrl=%2Fdashboard - null null
+2025-08-05 23:08:01.565 +05:30 [INF] Executing endpoint 'FundBeacon.Controllers.AuthController.GoogleLogin (FundBeacon)'
+2025-08-05 23:08:01.566 +05:30 [INF] Route matched with {action = "GoogleLogin", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GoogleLogin(System.String) on controller FundBeacon.Controllers.AuthController (FundBeacon).
+2025-08-05 23:08:10.984 +05:30 [INF] Executing ChallengeResult with authentication schemes (["Google"]).
+2025-08-05 23:08:10.985 +05:30 [INF] AuthenticationScheme: Google was challenged.
+2025-08-05 23:08:10.985 +05:30 [INF] Executed action FundBeacon.Controllers.AuthController.GoogleLogin (FundBeacon) in 9419.1448ms
+2025-08-05 23:08:10.985 +05:30 [INF] Executed endpoint 'FundBeacon.Controllers.AuthController.GoogleLogin (FundBeacon)'
+2025-08-05 23:08:10.985 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7068/api/Auth/google-login?returnUrl=%2Fdashboard - 302 0 null 9435.2557ms
+2025-08-05 23:08:14.891 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__threshold_0='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[IsDeleted], [a].[IsLive], [a].[IsVerified], [a].[LastLogin], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[RefreshTokenExpiryTime], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[IsDeleted] = CAST(0 AS bit) AND [a].[LastLogin] < @__threshold_0 AND [a].[IsDeleted] = CAST(0 AS bit)
+2025-08-05 23:08:22.307 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7068/dashboard?error=access_denied&state=CfDJ8GC48gb-8ZhBsoyXABVs1FR33leWKF3Qf9FIyjdlbF2WFod8XFXTkGpqQZzGNfv--T2OdSx_lze-wH1V_cJ3_aO7GxYUz-lAb4MSL0hB1O_VGttKCzZqtLEsXnqMYI8KBu9FB-l-blsj5rYVekgkNPdI9I7AVXjfXOxPfvpnMGAI47AdUQ8SiSDg39NUS7KgkWoCAPp6O0Fey2P-EVO5AkucoKbz6qyd8P24cEwV9B5c6IgAYx2UgDgK3UWAbrTYUoff5lSZHqTovIImj4snOorh5Tsj2rBg7NJPTen9-ziUttrIzcNylQSv16fgaMeplM8Ecwr9ErQT9lQF3lEaSMHXrOXm65fyhupyjIIskht-DC0phd6IQirRhcRBlKGRBw - null null
+2025-08-05 23:08:22.329 +05:30 [INF] Access was denied by the resource owner or by the remote server.
+2025-08-05 23:08:22.330 +05:30 [INF] Error from RemoteAuthentication: Access was denied by the resource owner or by the remote server..
+2025-08-05 23:08:22.334 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.AspNetCore.Authentication.AuthenticationFailureException: An error was encountered while handling the remote login.
+ ---> Microsoft.AspNetCore.Authentication.AuthenticationFailureException: Access was denied by the resource owner or by the remote server.
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Authentication.RemoteAuthenticationHandler`1.HandleRequestAsync()
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-08-05 23:08:22.437 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7068/dashboard?error=access_denied&state=CfDJ8GC48gb-8ZhBsoyXABVs1FR33leWKF3Qf9FIyjdlbF2WFod8XFXTkGpqQZzGNfv--T2OdSx_lze-wH1V_cJ3_aO7GxYUz-lAb4MSL0hB1O_VGttKCzZqtLEsXnqMYI8KBu9FB-l-blsj5rYVekgkNPdI9I7AVXjfXOxPfvpnMGAI47AdUQ8SiSDg39NUS7KgkWoCAPp6O0Fey2P-EVO5AkucoKbz6qyd8P24cEwV9B5c6IgAYx2UgDgK3UWAbrTYUoff5lSZHqTovIImj4snOorh5Tsj2rBg7NJPTen9-ziUttrIzcNylQSv16fgaMeplM8Ecwr9ErQT9lQF3lEaSMHXrOXm65fyhupyjIIskht-DC0phd6IQirRhcRBlKGRBw - 500 null text/html; charset=utf-8 129.39ms
+2025-08-05 23:08:22.472 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7068/_vs/browserLink - null null
+2025-08-05 23:08:22.485 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7068/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-05 23:08:22.489 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7068/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 4.5847ms
+2025-08-05 23:08:22.521 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7068/_vs/browserLink - 200 null text/javascript; charset=UTF-8 48.9475ms
+2025-08-05 23:08:22.584 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7068/favicon.ico - null null
+2025-08-05 23:08:22.586 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7068/favicon.ico - 404 0 null 2.2325ms
+2025-08-05 23:08:22.587 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7068/favicon.ico, Response status code: 404
+2025-08-05 23:08:40.631 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7068/api/Auth/google-login?returnUrl=%2Fdashboard - null null
+2025-08-05 23:08:40.635 +05:30 [INF] Executing endpoint 'FundBeacon.Controllers.AuthController.GoogleLogin (FundBeacon)'
+2025-08-05 23:08:40.635 +05:30 [INF] Route matched with {action = "GoogleLogin", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GoogleLogin(System.String) on controller FundBeacon.Controllers.AuthController (FundBeacon).
+2025-08-05 23:08:43.036 +05:30 [INF] Executing ChallengeResult with authentication schemes (["Google"]).
+2025-08-05 23:08:43.037 +05:30 [INF] AuthenticationScheme: Google was challenged.
+2025-08-05 23:08:43.037 +05:30 [INF] Executed action FundBeacon.Controllers.AuthController.GoogleLogin (FundBeacon) in 2401.9279ms
+2025-08-05 23:08:43.037 +05:30 [INF] Executed endpoint 'FundBeacon.Controllers.AuthController.GoogleLogin (FundBeacon)'
+2025-08-05 23:08:43.037 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7068/api/Auth/google-login?returnUrl=%2Fdashboard - 302 0 null 2406.6996ms
+2025-08-05 23:08:51.886 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7068/dashboard?state=CfDJ8GC48gb-8ZhBsoyXABVs1FTp7gRgkMQcq9pVgiBXpOEVijH_1CajHBs7cgdfLwoYCHzb1dmRyq_f5yvpfTy9MSXgay6C5d01szB_DBtUYF9gtibHFfEmrO5r0iecdsOzb0jVLkGcjBPkBYr2Gos_XCYmdPUAFDumDTYYu905L5yQrkT8KfZvwcSZolE183kX-xQDqza8woHgwIR_zfeP5HSX1HlnWfh07QXVA98xoKUce6Lh3HT5_aHwzOGVUOfB6ZSk_W39ayAJhjaAGioWL6WJs1Nm68j3wdjCXNihfiMNVM4D2QvTI3EmCl_cVnrVscYNYOQcT5GPIvcNqacqp66jAtSyAaN1rn_WmEZSDcZNXlj3IVwr9UXcNqYs3Qm5gQ&code=4%2F0AVMBsJiu1lct5JpirB2bHEmaJCXx14E5eBchM6pSDTaTpUAz7SAVNjtPPPQBCksgAGN7dw&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+openid&authuser=1&prompt=consent - null null
+2025-08-05 23:08:52.722 +05:30 [INF] AuthenticationScheme: Identity.External signed in.
+2025-08-05 23:08:52.723 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7068/dashboard?state=CfDJ8GC48gb-8ZhBsoyXABVs1FTp7gRgkMQcq9pVgiBXpOEVijH_1CajHBs7cgdfLwoYCHzb1dmRyq_f5yvpfTy9MSXgay6C5d01szB_DBtUYF9gtibHFfEmrO5r0iecdsOzb0jVLkGcjBPkBYr2Gos_XCYmdPUAFDumDTYYu905L5yQrkT8KfZvwcSZolE183kX-xQDqza8woHgwIR_zfeP5HSX1HlnWfh07QXVA98xoKUce6Lh3HT5_aHwzOGVUOfB6ZSk_W39ayAJhjaAGioWL6WJs1Nm68j3wdjCXNihfiMNVM4D2QvTI3EmCl_cVnrVscYNYOQcT5GPIvcNqacqp66jAtSyAaN1rn_WmEZSDcZNXlj3IVwr9UXcNqYs3Qm5gQ&code=4%2F0AVMBsJiu1lct5JpirB2bHEmaJCXx14E5eBchM6pSDTaTpUAz7SAVNjtPPPQBCksgAGN7dw&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+openid&authuser=1&prompt=consent - 302 0 null 837.8226ms
+2025-08-05 23:08:52.730 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7068/api/Auth/google-response?returnUrl=%2Fdashboard - null null
+2025-08-05 23:08:52.734 +05:30 [INF] Executing endpoint 'FundBeacon.Controllers.AuthController.GoogleResponse (FundBeacon)'
+2025-08-05 23:08:52.744 +05:30 [INF] Route matched with {action = "GoogleResponse", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GoogleResponse(System.String) on controller FundBeacon.Controllers.AuthController (FundBeacon).
+2025-08-05 23:09:41.532 +05:30 [INF] Executed DbCommand (50ms) [Parameters=[@__threshold_0='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[IsDeleted], [a].[IsLive], [a].[IsVerified], [a].[LastLogin], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[RefreshTokenExpiryTime], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[IsDeleted] = CAST(0 AS bit) AND [a].[LastLogin] < @__threshold_0 AND [a].[IsDeleted] = CAST(0 AS bit)
+2025-08-05 23:09:41.555 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[IsDeleted], [a].[IsLive], [a].[IsVerified], [a].[LastLogin], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[RefreshTokenExpiryTime], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[IsDeleted] = CAST(0 AS bit) AND [a].[NormalizedEmail] = @__normalizedEmail_0
+2025-08-05 23:09:46.858 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[IsDeleted], [a].[IsLive], [a].[IsVerified], [a].[LastLogin], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[RefreshTokenExpiryTime], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[IsDeleted] = CAST(0 AS bit) AND [a].[NormalizedUserName] = @__normalizedUserName_0
+2025-08-05 23:09:47.028 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (Size = 256), @p4='?' (DbType = Boolean), @p5='?' (DbType = Boolean), @p6='?' (DbType = Boolean), @p7='?' (DbType = Boolean), @p8='?' (DbType = DateTime2), @p9='?' (DbType = Boolean), @p10='?' (DbType = DateTimeOffset), @p11='?' (Size = 256), @p12='?' (Size = 256), @p13='?' (Size = 4000), @p14='?' (Size = 4000), @p15='?' (DbType = Boolean), @p16='?' (Size = 4000), @p17='?' (DbType = DateTime2), @p18='?' (Size = 4000), @p19='?' (DbType = Boolean), @p20='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AspNetUsers] ([Id], [AccessFailedCount], [ConcurrencyStamp], [Email], [EmailConfirmed], [IsDeleted], [IsLive], [IsVerified], [LastLogin], [LockoutEnabled], [LockoutEnd], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [RefreshToken], [RefreshTokenExpiryTime], [SecurityStamp], [TwoFactorEnabled], [UserName])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19, @p20);
+2025-08-05 23:09:51.396 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2025-08-05 23:09:51.427 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2025-08-05 23:09:51.529 +05:30 [INF] Executed action FundBeacon.Controllers.AuthController.GoogleResponse (FundBeacon) in 58784.9217ms
+2025-08-05 23:09:51.529 +05:30 [INF] Executed endpoint 'FundBeacon.Controllers.AuthController.GoogleResponse (FundBeacon)'
+2025-08-05 23:09:51.531 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Role CUSTOMER does not exist.
+   at Microsoft.AspNetCore.Identity.EntityFrameworkCore.UserStore`9.AddToRoleAsync(TUser user, String normalizedRoleName, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Identity.UserManager`1.AddToRoleAsync(TUser user, String role)
+   at FundBeacon.Application.Services.GoogleAuthService.HandleGoogleLoginAsync(ExternalLoginInfo info) in C:\Users\sivalingam.k\source\repos\FundBeacon\FundBeacon.Application\Services\GoogleAuthService.cs:line 46
+   at FundBeacon.Controllers.AuthController.GoogleResponse(String returnUrl) in C:\Users\sivalingam.k\source\repos\FundBeacon\FundBeacon\Controllers\AuthController.cs:line 99
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-08-05 23:09:51.592 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7068/api/Auth/google-response?returnUrl=%2Fdashboard - 500 null text/html; charset=utf-8 58862.0176ms
+2025-08-05 23:09:51.611 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7068/_vs/browserLink - null null
+2025-08-05 23:09:51.620 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7068/_framework/aspnetcore-browser-refresh.js - null null
+2025-08-05 23:09:51.622 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7068/_framework/aspnetcore-browser-refresh.js - 200 13756 application/javascript; charset=utf-8 3.4096ms
+2025-08-05 23:09:51.643 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7068/_vs/browserLink - 200 null text/javascript; charset=UTF-8 32.202ms
+2025-08-05 23:10:41.544 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__threshold_0='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[IsDeleted], [a].[IsLive], [a].[IsVerified], [a].[LastLogin], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[RefreshTokenExpiryTime], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[IsDeleted] = CAST(0 AS bit) AND [a].[LastLogin] < @__threshold_0 AND [a].[IsDeleted] = CAST(0 AS bit)
+2025-08-05 23:10:54.824 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7068/api/Auth/google-login?returnUrl=%2Fdashboard - null null
+2025-08-05 23:10:54.833 +05:30 [INF] Executing endpoint 'FundBeacon.Controllers.AuthController.GoogleLogin (FundBeacon)'
+2025-08-05 23:10:54.834 +05:30 [INF] Route matched with {action = "GoogleLogin", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GoogleLogin(System.String) on controller FundBeacon.Controllers.AuthController (FundBeacon).
+2025-08-05 23:11:00.656 +05:30 [INF] Executing ChallengeResult with authentication schemes (["Google"]).
+2025-08-05 23:11:00.657 +05:30 [INF] AuthenticationScheme: Google was challenged.
+2025-08-05 23:11:00.657 +05:30 [INF] Executed action FundBeacon.Controllers.AuthController.GoogleLogin (FundBeacon) in 5823.2162ms
+2025-08-05 23:11:00.657 +05:30 [INF] Executed endpoint 'FundBeacon.Controllers.AuthController.GoogleLogin (FundBeacon)'
+2025-08-05 23:11:00.657 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7068/api/Auth/google-login?returnUrl=%2Fdashboard - 302 0 null 5833.2924ms
+2025-08-05 23:11:07.876 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7068/dashboard?state=CfDJ8GC48gb-8ZhBsoyXABVs1FTNChieZuaBZVNCOaJxeunWnZlogFkIQazXq8VrUu5_QhQhxTRrPw3QeyOUvr1KMvHT21iJ4nc74mXSmG1XB1m-GfjV78XnRBzHPkbErpaHoQnFx25fNrV1Bj8zZm_ZzWQn9foSoLa-7-ist1_H20O__T3iLvHNENHl2pLOx396sh-8_oL7Be0ylo-KIo0nS06evuNYXQG9uGaeVs0sfgNZU3ZPDONoG5o2RBZcxhgTfbBWvlcZ1BM_ucW8pTESuRokSy4dcIlEfqcVjZFNi9oN7cbk6ZlKQo68a5Qxv37jCtBQ8sgG34jCEBJ3aExpeYCF5nO_m_RA8fCVP6l7VRGzru6wRO2MDr8a5tFlFkor2A&code=4%2F0AVMBsJhY9vk_GKX7NM_NfOw35ETKmR6UiBZONZXCLWXZmt9VpJsiD0FkhLYPrjorm6z6zg&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+openid&authuser=1&prompt=none - null null
+2025-08-05 23:11:08.479 +05:30 [INF] AuthenticationScheme: Identity.External signed in.
+2025-08-05 23:11:08.480 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7068/dashboard?state=CfDJ8GC48gb-8ZhBsoyXABVs1FTNChieZuaBZVNCOaJxeunWnZlogFkIQazXq8VrUu5_QhQhxTRrPw3QeyOUvr1KMvHT21iJ4nc74mXSmG1XB1m-GfjV78XnRBzHPkbErpaHoQnFx25fNrV1Bj8zZm_ZzWQn9foSoLa-7-ist1_H20O__T3iLvHNENHl2pLOx396sh-8_oL7Be0ylo-KIo0nS06evuNYXQG9uGaeVs0sfgNZU3ZPDONoG5o2RBZcxhgTfbBWvlcZ1BM_ucW8pTESuRokSy4dcIlEfqcVjZFNi9oN7cbk6ZlKQo68a5Qxv37jCtBQ8sgG34jCEBJ3aExpeYCF5nO_m_RA8fCVP6l7VRGzru6wRO2MDr8a5tFlFkor2A&code=4%2F0AVMBsJhY9vk_GKX7NM_NfOw35ETKmR6UiBZONZXCLWXZmt9VpJsiD0FkhLYPrjorm6z6zg&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+openid&authuser=1&prompt=none - 302 0 null 603.6412ms
+2025-08-05 23:11:08.496 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7068/api/Auth/google-response?returnUrl=%2Fdashboard - null null
+2025-08-05 23:11:08.511 +05:30 [INF] Executing endpoint 'FundBeacon.Controllers.AuthController.GoogleResponse (FundBeacon)'
+2025-08-05 23:11:08.525 +05:30 [INF] Route matched with {action = "GoogleResponse", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GoogleResponse(System.String) on controller FundBeacon.Controllers.AuthController (FundBeacon).
+2025-08-05 23:11:17.450 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[IsDeleted], [a].[IsLive], [a].[IsVerified], [a].[LastLogin], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[RefreshTokenExpiryTime], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[IsDeleted] = CAST(0 AS bit) AND [a].[NormalizedEmail] = @__normalizedEmail_0
+2025-08-05 23:11:19.103 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__loginProvider_0='?' (Size = 450), @__providerKey_1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[LoginProvider], [a].[ProviderKey], [a].[ProviderDisplayName], [a].[UserId]
+FROM [AspNetUserLogins] AS [a]
+WHERE [a].[LoginProvider] = @__loginProvider_0 AND [a].[ProviderKey] = @__providerKey_1
+2025-08-05 23:11:22.679 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__loginProvider_0='?' (Size = 450), @__providerKey_1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[LoginProvider], [a].[ProviderKey], [a].[ProviderDisplayName], [a].[UserId]
+FROM [AspNetUserLogins] AS [a]
+WHERE [a].[LoginProvider] = @__loginProvider_0 AND [a].[ProviderKey] = @__providerKey_1
+2025-08-05 23:11:22.757 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[IsDeleted], [a].[IsLive], [a].[IsVerified], [a].[LastLogin], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[RefreshTokenExpiryTime], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[IsDeleted] = CAST(0 AS bit) AND [a].[NormalizedUserName] = @__normalizedUserName_0
+2025-08-05 23:11:22.795 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 450), @p2='?' (Size = 4000), @p3='?' (Size = 450), @p24='?' (Size = 450), @p4='?' (DbType = Int32), @p5='?' (Size = 4000), @p25='?' (Size = 4000), @p6='?' (Size = 256), @p7='?' (DbType = Boolean), @p8='?' (DbType = Boolean), @p9='?' (DbType = Boolean), @p10='?' (DbType = Boolean), @p11='?' (DbType = DateTime2), @p12='?' (DbType = Boolean), @p13='?' (DbType = DateTimeOffset), @p14='?' (Size = 256), @p15='?' (Size = 256), @p16='?' (Size = 4000), @p17='?' (Size = 4000), @p18='?' (DbType = Boolean), @p19='?' (Size = 4000), @p20='?' (DbType = DateTime2), @p21='?' (Size = 4000), @p22='?' (DbType = Boolean), @p23='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUserLogins] ([LoginProvider], [ProviderKey], [ProviderDisplayName], [UserId])
+VALUES (@p0, @p1, @p2, @p3);
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p4, [ConcurrencyStamp] = @p5, [Email] = @p6, [EmailConfirmed] = @p7, [IsDeleted] = @p8, [IsLive] = @p9, [IsVerified] = @p10, [LastLogin] = @p11, [LockoutEnabled] = @p12, [LockoutEnd] = @p13, [NormalizedEmail] = @p14, [NormalizedUserName] = @p15, [PasswordHash] = @p16, [PhoneNumber] = @p17, [PhoneNumberConfirmed] = @p18, [RefreshToken] = @p19, [RefreshTokenExpiryTime] = @p20, [SecurityStamp] = @p21, [TwoFactorEnabled] = @p22, [UserName] = @p23
+OUTPUT 1
+WHERE [Id] = @p24 AND [ConcurrencyStamp] = @p25;
+2025-08-05 23:11:23.869 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2025-08-05 23:11:28.349 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[IsDeleted], [a].[IsLive], [a].[IsVerified], [a].[LastLogin], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[RefreshTokenExpiryTime], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[IsDeleted] = CAST(0 AS bit) AND [a].[NormalizedUserName] = @__normalizedUserName_0
+2025-08-05 23:11:28.447 +05:30 [INF] Executed DbCommand (94ms) [Parameters=[@p20='?' (Size = 450), @p0='?' (DbType = Int32), @p1='?' (Size = 4000), @p21='?' (Size = 4000), @p2='?' (Size = 256), @p3='?' (DbType = Boolean), @p4='?' (DbType = Boolean), @p5='?' (DbType = Boolean), @p6='?' (DbType = Boolean), @p7='?' (DbType = DateTime2), @p8='?' (DbType = Boolean), @p9='?' (DbType = DateTimeOffset), @p10='?' (Size = 256), @p11='?' (Size = 256), @p12='?' (Size = 4000), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 4000), @p16='?' (DbType = DateTime2), @p17='?' (Size = 4000), @p18='?' (DbType = Boolean), @p19='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p0, [ConcurrencyStamp] = @p1, [Email] = @p2, [EmailConfirmed] = @p3, [IsDeleted] = @p4, [IsLive] = @p5, [IsVerified] = @p6, [LastLogin] = @p7, [LockoutEnabled] = @p8, [LockoutEnd] = @p9, [NormalizedEmail] = @p10, [NormalizedUserName] = @p11, [PasswordHash] = @p12, [PhoneNumber] = @p13, [PhoneNumberConfirmed] = @p14, [RefreshToken] = @p15, [RefreshTokenExpiryTime] = @p16, [SecurityStamp] = @p17, [TwoFactorEnabled] = @p18, [UserName] = @p19
+OUTPUT 1
+WHERE [Id] = @p20 AND [ConcurrencyStamp] = @p21;
+2025-08-05 23:11:33.774 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType3`3[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-08-05 23:11:33.933 +05:30 [INF] Executed action FundBeacon.Controllers.AuthController.GoogleResponse (FundBeacon) in 25407.575ms
+2025-08-05 23:11:33.933 +05:30 [INF] Executed endpoint 'FundBeacon.Controllers.AuthController.GoogleResponse (FundBeacon)'
+2025-08-05 23:11:33.933 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7068/api/Auth/google-response?returnUrl=%2Fdashboard - 200 null application/json; charset=utf-8 25438.79ms
+2025-08-05 23:11:41.566 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__threshold_0='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[IsDeleted], [a].[IsLive], [a].[IsVerified], [a].[LastLogin], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[RefreshToken], [a].[RefreshTokenExpiryTime], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[IsDeleted] = CAST(0 AS bit) AND [a].[LastLogin] < @__threshold_0 AND [a].[IsDeleted] = CAST(0 AS bit)

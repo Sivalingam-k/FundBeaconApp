@@ -43,7 +43,7 @@ namespace FundBeacon.Application.Services
                 if (!createResult.Succeeded)
                     return (false, "Failed to create user", null, null);
 
-                await _userManager.AddToRoleAsync(user, "customer");
+                await _userManager.AddToRoleAsync(user, "STUDENT");
             }
 
             // Link login if not already linked
